@@ -1,0 +1,95 @@
+
+//Mixins are kind of like defining functions. when you call the "banner" mixin, it calls all the rules we put in each @mixin
+
+
+@import "variables.scss";
+
+
+
+@mixin banner {
+    width: 100%;
+    position: relative;
+    color: white;
+
+    .banner-content{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    span{
+        font-size: $bannerHeading;
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include mQ(3000px, 1200px){
+            font-size: 68px;
+        }
+    }
+
+    span.title{
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+} // end banner
+
+
+@mixin clearFix{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin grid { 
+    display: grid;
+		grid-template-rows: 
+            [row1-start] auto 
+            [row2-start] auto 
+            [row3-start] auto 
+            [row4-start] auto 
+            [row5-start] auto 
+            [row6-start] auto;
+		grid-template-columns: [column1] 1fr [column2] 1fr;
+        column-gap: 2em;
+}
+
+
+
+
+/* the 3 dots in the below mQ mixin means that more than just one argument can be fed into the mixin (kinda like a function) */
+@mixin mQ($arg...) {
+    @if length($arg) == 1{      /* if there's only 1 item in the argument, do the below stuff */
+        @media screen and (max-width: nth($arg, 1)) {
+            @content;
+        }
+    }
+    @if length($arg) == 2{      /* if there's 2 items in the argument, do the below stuff instead */
+        @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)) {
+            @content;
+        }
+    }
+}
+
+
+
+//mixin that creates responsive web design media inquiries
+    /* example:
+    now I can "call" this mixin by typing "@include responsive(480px)" and the mixin will write "@media screen and (min-width: 480px)" into the CSS code
+
+    */
+
+@mixin responsive($pixelNumber) {
+    @media screen and (min-width: $pixelNumber) {
+        @content;
+    }
+}
+
+
+
+

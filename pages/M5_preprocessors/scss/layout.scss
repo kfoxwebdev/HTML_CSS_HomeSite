@@ -1,0 +1,65 @@
+@import "variables.scss";
+@import "mixin.scss";
+
+
+
+/* layout rules below  */
+    /* default design is for smartphones, and additional rules change the grid for larger viewports */
+
+#main-nav {
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+.banner-content {
+    span {
+    font-size: 1.5em;
+    line-height: 1.75em;
+    }
+}
+
+
+
+/* tablet/medium screen rules - I used the mixin called "responsive" so I dont have to type out the whole media inquiry code for each screen size*/
+
+@include responsive(480px) {
+    
+    
+    #main-nav {
+
+        ul {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    
+}
+
+
+
+
+/* full size screen rules */
+
+@include responsive(780px) {
+
+
+    #main-nav{
+        background: $prettyPurp;
+    
+        a{
+            &:hover{
+                background: $prettyPurpHover;
+            }
+            &:active{
+                color: $prettyPurpClick;
+            }
+        }
+    }
+    
+}
+

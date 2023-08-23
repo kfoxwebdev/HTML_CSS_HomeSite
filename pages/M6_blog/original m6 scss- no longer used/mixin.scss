@@ -1,0 +1,9 @@
+@import "variables.scss";
+
+
+
+@mixin responsive($pixels) {
+    @media screen and (min-width: $pixels) {
+        @content;
+    }
+}

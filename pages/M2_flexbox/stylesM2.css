@@ -1,0 +1,342 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+html {
+    color: rgb(20, 20, 20);
+    background-color: rgb(36, 52, 30);
+    font-family: 'Roboto', Verdana, Tahoma, sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+body {
+    background-color: rgb(228, 226, 218);
+    margin: 0 auto;
+    
+        /*  These rules were from when the body was narrower than the viewport, creating the look of margins on each side of the body.
+        max-width: 950px;
+        box-shadow: 0 1px 4px 1px #17171a;
+        */
+}
+
+
+
+main {
+    padding: 0 8%;
+}
+
+header {
+    background-image: url("images/bannerPic.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+header h1 {
+    color: rgb(162, 162, 162);
+    font-family: 'Bebas Neue', Verdana, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 5em;
+    padding: 1em 0;
+    line-height: 1;
+    margin: 0;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+section {
+    padding-bottom: 1em;
+    border-bottom: .1em solid #bebebe;
+}
+
+blockquote {
+    background-color: white;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.italic{
+    font-style: italic;
+}
+
+
+.copyrighttext{
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+
+footer {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 0;
+}
+
+/* To visually hide skip links */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* To make skip links visible on focus */
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+
+
+
+
+/* navigation menu styles */
+
+nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+        /* these rules make the Nav bar stick to the top of the screen when you scroll down */
+}
+
+nav menu {  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+        /* I originally added the two below rules make the main menu buttons stay to the left, except fot the "projects" button which is on the right. However, we were instructed to not use floats in our Nav Bar, so I contained these rules in a comment in case I need to reference them later. 
+
+        menu li {
+          float: left;
+        }
+
+        #projectsbutton {
+          float: right;
+        }
+
+        */
+
+
+    /* the below rules control the color & style of the links in the nav bar- making them stay the same colors even if they've been clicked so that the menu buttons look consistant. Although the background color does change for hover and clicks. */
+
+li a {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+li a:link {
+    color: rgb(228, 226, 218);
+}
+
+li a:visited {
+    color: rgb(228, 226, 218);
+}
+
+li a:hover {
+    color: rgb(228, 226, 218);
+    background-color: rgb(77, 77, 77);
+}
+
+li a:active {
+    color: rgb(228, 226, 218);
+    background-color: rgb(39, 39, 39);
+}
+
+
+
+
+
+/* multicolumn section style rules */
+
+#multicolumn div {
+    columns: 3 250px;
+    column-gap: 2.5em;
+}
+
+
+
+
+/* css shapes rules*/
+
+#shapes img {
+    float: left;
+}
+
+img[src*=roundYellow] {
+    shape-outside: circle(50%);
+}
+
+
+
+
+/* Card rules */
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+
+
+/* Gallery Thumbnail Rules - these CSS rules use a flexbox to center the thumbnails on the M1 Gallery. The thumbnails also grow slightly larger if you hover a mouse over them.*/
+
+#thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;          
+}
+
+.thumbnail {
+    height: 200px;
+    width: auto;
+    margin: 1em;
+}
+
+#thumbnails a {
+    transition: .3s ease-in-out;
+}
+
+#thumbnails a:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+/* rules for smaller screens and devices below - they change the margin sizes, and rearrange the menu for mobile devices. I commented them all out so they won't interfere in this M2 Flexbox version of the homepage. */
+
+
+        /* remove this line to revert back to original
+
+
+
+
+@media screen and (max-width: 1400px) {
+    body {
+        margin: 0% 15%;
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    body {
+        margin: 0% 5%;
+  }
+
+}
+
+
+
+        remove this line to revert back to original */ 
+
+
+
+
+
+    /* the style rules for small screens also rearrange the header & nav bar */
+
+
+
+
+        /* remove this line to revert back to original
+
+
+
+
+@media only screen and (max-width: 650px) {
+    body {
+        margin: 0%;
+  }
+
+    header h1 {
+        font-size: 2.25em;
+  }
+
+    menu li {
+        float: none;
+  }
+
+    li a {
+        text-align: left;
+        border-bottom: 1px solid rgb(228, 226, 218);
+  }
+
+    #assignmentsbutton {
+        float: none;
+  }
+
+
+
+
+        remove this line to revert back to original */
+
+
+
+
+    /*   ^  this makes the "projects" button stay to the left for the mobile version of the site.   */
+
+
+
+
+        /* remove this line to revert back to original
+
+
+
+
+    nav {
+        position: relative;
+  }
+
+
+}
+
+
+
+        remove this line to revert back to original */

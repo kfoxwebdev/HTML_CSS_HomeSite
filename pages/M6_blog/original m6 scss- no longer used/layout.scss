@@ -1,0 +1,75 @@
+/* these style rules control responsive layout */
+
+
+
+/* ---------- tablet style rules ---------- */
+
+@include responsive(650px) {
+    body {
+        margin: 0% 5%;
+    }
+    
+    header {
+        h1 {
+        font-size: 3.5em;
+        }
+    }
+
+    li {
+        a{
+        text-align: center;
+        border-bottom: none;
+        }
+    }
+
+    nav {
+    /* these rules make the Nav bar stick to the top of the screen when you scroll down */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    } 
+}
+
+@include responsive(800px) {
+    
+    .m6article {
+        
+        picture {
+            float: left;
+            padding: 1em;
+        }
+        
+        ul {
+            clear: left;
+        }
+        
+        p {
+            padding: 1em 0 0 0;
+        }
+        
+    }
+}
+
+
+@include responsive(1000px) {
+    body {
+    margin: 0% 15%;
+  }
+}
+
+
+
+
+/* ---------- desktop style rules ---------- */
+
+@include responsive(1400px) {
+    body {
+        margin: 0% auto;
+        max-width: 950px;
+    }
+
+}
+
+
+
+

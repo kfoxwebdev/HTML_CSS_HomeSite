@@ -1,0 +1,116 @@
+@import "reset.scss";
+@import "variables.scss";
+@import "mixin.scss";
+// we moved this lower:     @import "layout.scss";
+@import "base.scss";
+
+
+/* the above code loads the stuff we put in the reset.scss document, the variables.scss document, and the mixin.scss document, etc*/
+
+
+#main-nav{
+    background: $deepBlue;
+
+    ul{
+        width: 100%;
+        @include clearFix;   /* the "@include" keyword lets the code know to use the mixin that we called "clearFix" in the mixin.scss file */
+    }
+
+    a{
+        color: $offWhite;
+        text-decoration: none;
+        padding: 16px;
+        display: block;
+        text-align: center;
+        &:hover{
+            background: lighten($deepBlue, 6);  /* the "lighten" function takes the color (our deepBlue variable) and lightens it by the number we put in the parenthesis */
+        }
+    }
+}  //end #main-nav
+
+
+@import "layout.scss";
+
+
+section h1{
+    font-size: $sectionHeading;
+    color: $deepBlue;
+}
+
+
+.lead-banner{
+    @include banner; 
+    text-align: right;
+}
+
+
+.lessons-banner{
+    @include banner;
+    line-height: 1em;
+
+    .title, .sub-title{
+        font-size: 20px;
+        line-height: 1em;
+    }
+
+    span.title {
+        margin-bottom: 1px;
+    }
+
+    li{
+        text-transform: uppercase;
+        font-size: 15px;
+        max-width: 500px;
+        margin: 20px 0;
+        line-height: 1em;
+    }
+}
+
+
+#services{
+    margin-bottom: 60px;
+
+    
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    li {
+    text-align: center;
+    }
+
+    img{
+        width: 20vw;
+        min-width: 100px;
+        max-width: 250px;
+        margin: 20px 20%;
+    }
+
+    a{
+        text-decoration: none;
+        color: $deepBlue;
+        font-weight: bold;
+        &:hover{
+            color: complement($deepBlue);  /* the "complement" function generates a complimentary color of whatever color we put in the parenthesis */
+        }
+    }
+
+    ul{
+        @include clearFix;
+    }
+}
+
+
+#projects {
+    ul {
+    @include grid;
+    }
+    img{
+        width: 100%;
+        margin: 8%;
+    }
+}

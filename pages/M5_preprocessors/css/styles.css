@@ -1,0 +1,490 @@
+body {
+  font-family: arial;
+  background: #f8f9fb;
+}
+
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* the 3 dots in the below mQ mixin means that more than just one argument can be fed into the mixin (kinda like a function) */
+/* example:
+now I can "call" this mixin by typing "@include responsive(480px)" and the mixin will write "@media screen and (min-width: 480px)" into the CSS code
+
+*/
+/* the above code loads the stuff we put in the reset.scss document, the variables.scss document, and the mixin.scss document, etc*/
+#main-nav {
+  background: #032f3e;
+}
+#main-nav ul {
+  width: 100%;
+  /* the "@include" keyword lets the code know to use the mixin that we called "clearFix" in the mixin.scss file */
+}
+#main-nav ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#main-nav a {
+  color: #f8f9fb;
+  text-decoration: none;
+  padding: 16px;
+  display: block;
+  text-align: center;
+}
+#main-nav a:hover {
+  background: #04455b;
+  /* the "lighten" function takes the color (our deepBlue variable) and lightens it by the number we put in the parenthesis */
+}
+
+/* the 3 dots in the below mQ mixin means that more than just one argument can be fed into the mixin (kinda like a function) */
+/* example:
+now I can "call" this mixin by typing "@include responsive(480px)" and the mixin will write "@media screen and (min-width: 480px)" into the CSS code
+
+*/
+/* layout rules below  */
+/* default design is for smartphones, and additional rules change the grid for larger viewports */
+#main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.banner-content span {
+  font-size: 1.5em;
+  line-height: 1.75em;
+}
+
+/* tablet/medium screen rules - I used the mixin called "responsive" so I dont have to type out the whole media inquiry code for each screen size*/
+@media screen and (min-width: 480px) {
+  #main-nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+/* full size screen rules */
+@media screen and (min-width: 780px) {
+  #main-nav {
+    background: #301835;
+  }
+  #main-nav a:hover {
+    background: #43224a;
+  }
+  #main-nav a:active {
+    color: #021921;
+  }
+}
+section h1 {
+  font-size: 24px;
+  color: #032f3e;
+}
+
+.lead-banner {
+  width: 100%;
+  position: relative;
+  color: white;
+  text-align: right;
+}
+.lead-banner .banner-content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.lead-banner img {
+  width: 100%;
+}
+.lead-banner span {
+  font-size: 35px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* if there's 2 items in the argument, do the below stuff instead */
+}
+@media screen and (max-width: 3000px) and (min-width: 1200px) {
+  .lead-banner span {
+    font-size: 68px;
+  }
+}
+.lead-banner span.title {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.lessons-banner {
+  width: 100%;
+  position: relative;
+  color: white;
+  line-height: 1em;
+}
+.lessons-banner .banner-content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.lessons-banner img {
+  width: 100%;
+}
+.lessons-banner span {
+  font-size: 35px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* if there's 2 items in the argument, do the below stuff instead */
+}
+@media screen and (max-width: 3000px) and (min-width: 1200px) {
+  .lessons-banner span {
+    font-size: 68px;
+  }
+}
+.lessons-banner span.title {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.lessons-banner .title, .lessons-banner .sub-title {
+  font-size: 20px;
+  line-height: 1em;
+}
+.lessons-banner span.title {
+  margin-bottom: 1px;
+}
+.lessons-banner li {
+  text-transform: uppercase;
+  font-size: 15px;
+  max-width: 500px;
+  margin: 20px 0;
+  line-height: 1em;
+}
+
+#services {
+  margin-bottom: 60px;
+}
+#services ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#services li {
+  text-align: center;
+}
+#services img {
+  width: 20vw;
+  min-width: 100px;
+  max-width: 250px;
+  margin: 20px 20%;
+}
+#services a {
+  text-decoration: none;
+  color: #032f3e;
+  font-weight: bold;
+}
+#services a:hover {
+  color: #3e1203;
+  /* the "complement" function generates a complimentary color of whatever color we put in the parenthesis */
+}
+#services ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#projects ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [row5-start] auto [row6-start] auto;
+  grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [row5-start] auto [row6-start] auto;
+  -ms-grid-columns: [column1] 2em 1fr 2em [column2] 2em 1fr;
+  grid-template-columns: [column1] 1fr [column2] 1fr;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+}
+
+#projects ul > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(10) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(11) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(12) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(13) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(14) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(15) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(16) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(17) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(18) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(19) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(20) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(21) {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(22) {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(23) {
+  -ms-grid-row: 6;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(24) {
+  -ms-grid-row: 6;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(25) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(26) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(27) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(28) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(29) {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(30) {
+  -ms-grid-row: 8;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(31) {
+  -ms-grid-row: 8;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(32) {
+  -ms-grid-row: 8;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(33) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(34) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(35) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(36) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(37) {
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(38) {
+  -ms-grid-row: 10;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(39) {
+  -ms-grid-row: 10;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(40) {
+  -ms-grid-row: 10;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(41) {
+  -ms-grid-row: 11;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(42) {
+  -ms-grid-row: 11;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(43) {
+  -ms-grid-row: 11;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(44) {
+  -ms-grid-row: 11;
+  -ms-grid-column: 7;
+}
+
+#projects ul > *:nth-child(45) {
+  -ms-grid-row: 12;
+  -ms-grid-column: 1;
+}
+
+#projects ul > *:nth-child(46) {
+  -ms-grid-row: 12;
+  -ms-grid-column: 3;
+}
+
+#projects ul > *:nth-child(47) {
+  -ms-grid-row: 12;
+  -ms-grid-column: 5;
+}
+
+#projects ul > *:nth-child(48) {
+  -ms-grid-row: 12;
+  -ms-grid-column: 7;
+}
+#projects img {
+  width: 100%;
+  margin: 8%;
+}
+/*# sourceMappingURL=styles.css.map */

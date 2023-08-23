@@ -1,0 +1,336 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+html {
+    color: rgb(20, 20, 20);
+    font-family: 'Roboto', Verdana, Tahoma, sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+body {
+    background-color: rgb(228, 226, 218);
+    margin: 0 auto;
+    
+        /*  These rules were from when the body was narrower than the viewport, creating the look of margins on each side of the body.
+        max-width: 950px;
+        box-shadow: 0 1px 4px 1px #17171a;
+        */
+}
+
+
+/* I had to remove the <main> element to get the grid CSS to work. I put the padding in a rule for .gridbody below since I gave that ID to all the elements in the grid except for the header.
+
+    main {
+        padding: 0 8%;
+    }
+
+*/
+
+
+header {
+    height: 50vh;
+    background-image: url("images/m3_bannerPic.jpg");
+    background-size: cover;
+}
+
+
+header h1 {
+    color: rgb(253, 253, 253);
+    font-family: 'Bebas Neue', Verdana, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 5em;
+    padding: 1em 0;
+    line-height: 1;
+    margin: 0;
+}
+
+
+
+h1 {
+    line-height: 1.2;
+}
+
+section {
+    padding-bottom: 1em;
+    border-bottom: .1em solid #bebebe;
+}
+
+
+.italic{
+    font-style: italic;
+}
+
+
+.copyrighttext{
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+img {
+    width: 20em;
+    float: left;
+    margin: 0.5em 2.5em;
+}
+
+
+/* To visually hide skip links */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* To make skip links visible on focus */
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+
+
+
+
+/* navigation menu styles */
+
+        /* I commented-out the sticky rules out because of the grid layout. the header bar would only "stick" within its grid box. when the viewport scrolls down past that grid box, the nav bar disappears like it would with normal non-sticky scrolling. 
+
+        nav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        */
+
+nav menu {  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  /* the assignment requires that nav bar items are in a column for smartphones, but in a row for larger devices */
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+    /* the below rules control the color & style of the links in the nav bar- making them stay the same colors even if they've been clicked so that the menu buttons look consistant. Although the background color does change for hover and clicks. */
+
+li a {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+li a:link {
+    color: rgb(228, 226, 218);
+}
+
+li a:visited {
+    color: rgb(228, 226, 218);
+}
+
+li a:hover {
+    color: rgb(228, 226, 218);
+    background-color: rgb(77, 77, 77);
+}
+
+li a:active {
+    color: rgb(228, 226, 218);
+    background-color: rgb(39, 39, 39);
+}
+
+
+
+
+
+/* Grid layout rules below  */
+    /* default design is for smartphones, and additional rules change the grid for larger viewports */
+
+.gridBody {
+    padding: 0 4%;
+}
+
+#layout {
+    display: grid;
+	grid-template-rows: 
+        [gridHeader-start] 65vh 
+        [content1-start] auto 
+        [content2-start] auto 
+        [footer-start] 2em;
+	grid-template-columns: [column1] 100%;
+	grid-template-areas:
+		"areaOne"
+		"areaTwo"
+		"areaFour"
+		"areaFive"
+}
+
+#gridHeader {
+    grid-area: areaOne;
+}
+    
+#gridText1 {
+    grid-area: areaTwo;
+}
+    
+#gridPics {
+    grid-area: areaThree;
+}
+    
+#gridText2 {
+    grid-area: areaFour;
+}
+    
+#gridFooter {
+    grid-area: areaFive;
+}
+
+
+
+
+/* tablet/medium screen rules */
+
+@media screen and (min-width: 480px) {
+    
+    header {
+        height: 35vh;
+    }
+    
+    nav menu {
+        flex-direction: row;
+    }
+    
+    img {
+        width: 15em;
+        float: left;
+        margin: 0.5em;
+    }
+
+	#layout {
+		display: grid;
+		grid-template-rows: 
+            [gridHeader-start] 40vh 
+            [content1-start] auto 
+            [content2-start] auto 
+            [footer-start] 2em;
+		grid-template-columns: [column1] 1fr [column2] 1fr;
+		grid-template-areas:
+			"areaOne areaOne"
+			"areaTwo areaThree"
+			"areaFour areaFour"
+			"areaFive areaFive"
+	}
+
+    #gridHeader {
+        grid-area: areaOne;
+    }
+    
+    #gridText1 {
+        grid-area: areaTwo;
+    }
+    
+    #gridPics {
+        grid-area: areaThree;
+    }
+    
+    #gridText2 {
+        grid-area: areaFour;
+    }
+    
+    #gridFooter {
+        grid-area: areaFive;
+    }
+    
+}
+
+
+
+
+/* full size screen rules */
+
+    /* at this size, the layout uses a new grid with extra columns acting as margin-space on the left and right sides of the page */
+
+@media screen and (min-width: 780px) {
+    
+    nav menu {
+        flex-direction: row;
+    }
+    
+    img {
+        width: 15em;
+        margin: .5em;
+        display: flex;
+        justify-content: space-around;
+    }
+
+	#layout {
+		display: grid;
+		grid-template-rows: 
+            [gridHeader-start] 40vh 
+            [content1-start] auto 
+            [content2-start] auto 
+            [footer-start] 2em;
+		grid-template-columns: [marginLeft] 0.5fr [col1] 1fr [col2] 1.5fr [marginRight] 0.25fr;
+		grid-template-areas:
+			"areaOne areaOne areaOne areaOne"
+			"margin1 areaTwo areaThree margin2"
+			"margin3 areaFour areaFour margin4"
+			"areaFive areaFive areaFive areaFive"
+	}
+
+    #gridHeader {
+        grid-area: areaOne;
+    }
+    
+    #gridText1 {
+        grid-area: areaTwo;
+    }
+    
+    #gridPics {
+        grid-area: areaThree;
+    }
+    
+    #gridText2 {
+        grid-area: areaFour;
+    }
+    
+    #gridFooter {
+        grid-area: areaFive;
+    }
+    
+}
+
+
+@media screen and (min-width: 1600px) {
+    
+    img {
+        width: 20em;
+    }
+    
+}
+
+

@@ -1,0 +1,232 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* ---------- main page styles ---------- */
+html {
+  color: rgb(20, 20, 20);
+  background-color: rgb(36, 52, 30);
+  font-family: "Roboto", Verdana, Tahoma, sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+body {
+  background-color: rgb(228, 226, 218);
+  margin: 0%;
+  max-width: 950px;
+  -webkit-box-shadow: 0 1px 4px 1px #17171a;
+          box-shadow: 0 1px 4px 1px #17171a;
+}
+
+main {
+  padding: 0 8%;
+}
+
+header {
+  background-image: url("../../../images/bannerPic.jpg");
+  background-size: cover;
+}
+
+header h1 {
+  color: rgb(168, 58, 58);
+  font-family: "Bebas Neue", Verdana, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 2.25em;
+  padding: 1em 0;
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+section, .sectionStyle {
+  padding-bottom: 1em;
+  border-bottom: 0.1em solid #bebebe;
+}
+
+blockquote {
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.m6article {
+  background-color: white;
+  padding: 1em;
+}
+.m6article ul {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.copyrighttext {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* To visually hide skip links */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* To make skip links visible on focus */
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+/* ---------- navigation menu styles ---------- */
+nav {
+  position: relative;
+}
+nav menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* the below rules control the color & style of the links in the nav bar- making them stay the same colors even if they've been clicked so that the menu buttons look consistant. Although the background color does change for hover and clicks. */
+li a {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid rgb(228, 226, 218);
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+li a:link {
+  color: rgb(228, 226, 218);
+}
+li a:visited {
+  color: rgb(228, 226, 218);
+}
+li a:hover {
+  color: rgb(228, 226, 218);
+  background-color: rgb(77, 77, 77);
+}
+li a:active {
+  color: rgb(228, 226, 218);
+  background-color: rgb(39, 39, 39);
+}
+
+/* ---------- Gallery Thumbnail Rules ---------- 
+
+these CSS rules center the thumbnails on the M1 Gallery. The thumbnails also grow slightly larger if you hover a mouse over them.*/
+#thumbnails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.thumbnail {
+  height: 200px;
+  width: auto;
+  margin: 1em;
+}
+
+#thumbnails a {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+#thumbnails a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* ---------- Responsive Style Rules ----------
+
+the below file contains the style rules for responsive design on larger screen sizes. the default style rules are for smartphones. */
+/* these style rules control responsive layout */
+/* ---------- tablet style rules ---------- */
+@media screen and (min-width: 650px) {
+  body {
+    margin: 0% 5%;
+  }
+
+  header h1 {
+    font-size: 3.5em;
+  }
+
+  li a {
+    text-align: center;
+    border-bottom: none;
+  }
+
+  nav {
+    /* these rules make the Nav bar stick to the top of the screen when you scroll down */
+    /* Safari */
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  .m6article picture {
+    float: left;
+    padding: 1em;
+  }
+  .m6article ul {
+    clear: left;
+  }
+  .m6article p {
+    padding: 1em 0 0 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    margin: 0% 15%;
+  }
+}
+/* ---------- desktop style rules ---------- */
+@media screen and (min-width: 1400px) {
+  body {
+    margin: 0% auto;
+    max-width: 950px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

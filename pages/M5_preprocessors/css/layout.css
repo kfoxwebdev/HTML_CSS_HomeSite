@@ -1,0 +1,357 @@
+body {
+  font-family: arial;
+  background: #f8f9fb;
+}
+
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* the 3 dots in the below mQ mixin means that more than just one argument can be fed into the mixin (kinda like a function) */
+/* Grid layout rules below  */
+/* default design is for smartphones, and additional rules change the grid for larger viewports */
+#layout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [header-start] 100vh [content1-start] auto [content2-start] auto [content3-start] auto [footer-start] 2em;
+  grid-template-rows: [header-start] 100vh [content1-start] auto [content2-start] auto [content3-start] auto [footer-start] 2em;
+  -ms-grid-columns: [column1] 100%;
+  grid-template-columns: [column1] 100%;
+      grid-template-areas: "areaOne" "areaTwo" "areaThree" "areaFour" "areaFive";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: areaOne;
+}
+
+#services {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: areaTwo;
+}
+
+.lessons-banner {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: areaThree;
+}
+
+#projects {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: areaFour;
+}
+
+footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: areaFive;
+}
+
+/* tablet/medium screen rules */
+@media screen and (min-width: 480px) {
+  /*
+  Body {
+  padding: 0 4%;
+  }
+  */
+  /*
+  header {
+      height: 35vh;
+  }
+  */
+  nav menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  #layout {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: [header-start] 40vh [content1-start] auto [content2-start] auto [footer-start] 2em;
+    grid-template-rows: [header-start] 40vh [content1-start] auto [content2-start] auto [footer-start] 2em;
+    -ms-grid-columns: [column1] 1fr [column2] 1fr;
+    grid-template-columns: [column1] 1fr [column2] 1fr;
+        grid-template-areas: "areaOne areaOne" "areaTwo areaThree" "areaFour areaFour" "areaFive areaFive";
+  }
+
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: areaOne;
+  }
+
+  #services {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: areaTwo;
+  }
+
+  .lessons-banner {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: areaThree;
+  }
+
+  #projects {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: areaFour;
+  }
+
+  footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: areaFive;
+  }
+
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+
+  #services {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .lessons-banner {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  #projects {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+
+  footer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+}
+/* full size screen rules */
+@media screen and (min-width: 780px) {
+  nav menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  #layout {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: [Header-start] 40vh [content1-start] auto [content2-start] auto [footer-start] 2em;
+    grid-template-rows: [Header-start] 40vh [content1-start] auto [content2-start] auto [footer-start] 2em;
+    -ms-grid-columns: [marginLeft] 0.5fr [col1] 1fr [col2] 1.5fr [marginRight] 0.25fr;
+    grid-template-columns: [marginLeft] 0.5fr [col1] 1fr [col2] 1.5fr [marginRight] 0.25fr;
+        grid-template-areas: "areaOne areaOne areaOne areaOne" "margin1 areaTwo areaThree margin2" "margin3 areaFour areaFour margin4" "areaFive areaFive areaFive areaFive";
+  }
+
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: areaOne;
+  }
+
+  #services {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: areaTwo;
+  }
+
+  .lessons-banner {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: areaThree;
+  }
+
+  #projects {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: areaFour;
+  }
+
+  footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: areaFive;
+  }
+
+  @media screen and (min-width: 480px) {
+
+  header {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+  }
+
+  #services {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+  }
+
+  .lessons-banner {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+  }
+
+  #projects {
+      -ms-grid-row: 3;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+  }
+
+  footer {
+      -ms-grid-row: 4;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+  }
+
+  header {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+  }
+
+  #services {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+  }
+
+  .lessons-banner {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+  }
+
+  #projects {
+      -ms-grid-row: 3;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+  }
+
+  footer {
+      -ms-grid-row: 4;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+  }
+  }
+
+  @media screen and (min-width: 780px) {
+
+  header {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 4;
+  }
+
+  #services {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+  }
+
+  .lessons-banner {
+      -ms-grid-row: 2;
+      -ms-grid-column: 3;
+  }
+
+  #projects {
+      -ms-grid-row: 3;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 2;
+  }
+
+  footer {
+      -ms-grid-row: 4;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 4;
+  }
+  }
+
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+  }
+
+  #services {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  .lessons-banner {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+
+  #projects {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
+
+  footer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+  }
+
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+  }
+
+  #services {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  .lessons-banner {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+
+  #projects {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
+
+  footer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+  }
+}
+/*# sourceMappingURL=layout.css.map */

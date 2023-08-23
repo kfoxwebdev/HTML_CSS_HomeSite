@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>KFox HTML CSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="stylesM2.css">
+
+
+</head>
+
+
+<body>
+
+  <header>
+    <h1>M2 Multicolumn and Flexbox Layouts</h1>
+  </header>
+
+  <a class="visually-hidden" href="#main">Skip to main content</a>
+
+  <nav>
+    <menu>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li id="projectsbutton"><a href="../projects.html">Projects</a></li>
+    </menu>
+  </nav>
+
+<!-- the Main section contains the actual content of each page -->
+
+  <main>
+
+    <h2>ID224 Advanced HTML and CSS Class</h2>
+
+  
+  
+    <section id="headerInfo">
+        <p> 
+            This page is a "dummy home screen" that focuses on the use of Flexbox positioning and multicolumn layouts.
+        </p>
+
+        <p>
+            The header of this page was made with a background image and style rules rules for "background-size: cover" and  "height: 100vh." The vh units (viewport height) are sized based on a percentage of the viewport. By setting the height of the header element to "100vh," it means the header will always take up 100% of whatever viewport is displaying the site.
+        </p>
+        
+        <p>
+            The header is also set to display as a flexbox so that its contents (the h1 text) will center itself without having to fine-tune any padding or margins.
+        </p>
+    </section>
+   
+   
+    <section id="multicolumn">
+        <h3>Nav Bar and Multicolumn</h3>
+        
+           <div> <!-- This div exists so that the multicolumn style rule only affects the below paragraphs, and not the h3 header that's in this section -->
+            <p> 
+                I used "position: sticky" style rules so that the nav bar always sticks to the top of the screen no matter how far down you scroll. Conversly, I used the sticky rules to make the footer always stay at the bottom of the viewport.
+            </p>
+            
+            <p>
+                This section also displays the text in multiple colums by using column-count and columm-width rules. It's set to 3 columns, but the minimum width per column is 250px. This means that there are normally 3 columns, unless the viewport gets too narrow for each column to be at least 250px wide. In this case, the number of columns is reduced so that the minimum column-width can be maintained. The column-gap is set to 2.5em to create a little extra space between columns.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed blandit turpis, sed tempus mauris. Integer vestibulum velit felis, sit amet posuere ante commodo id. Aenean eu malesuada libero, in tempus diam. Nulla bibendum ante eu odio consectetur molestie. Fusce finibus odio velit, ut elementum augue pretium vitae. Aenean efficitur, dolor eu imperdiet porta, magna neque placerat mi, ac tempus leo est ut lacus. Nam aliquet dolor arcu, nec ultricies est venenatis id. Proin placerat augue eu nunc condimentum rhoncus. Mauris fringilla est ac condimentum mollis. Duis diam purus, sodales quis risus et, mattis elementum purus
+            </p>
+            
+            <p>
+                Morbi imperdiet purus id volutpat varius. Quisque posuere, nunc nec commodo vestibulum, dolor justo aliquet turpis, eget sagittis nulla eros nec augue. Ut non cursus nunc, at pulvinar sapien. In nec placerat enim. Phasellus sit amet ligula non risus auctor dapibus et convallis odio. Donec egestas ante quis felis faucibus efficitur. Fusce condimentum ex elit, ac egestas sem commodo sed. Sed sodales ex aliquet iaculis finibus. Nam porta mi ut dolor eleifend, vel semper tellus sodales. Phasellus bibendum nunc ligula, at eleifend ante elementum vitae. Praesent vestibulum ac libero quis faucibus. 
+            </p>
+            
+            <p>
+                Sed euismod venenatis erat at lobortis. Curabitur sed venenatis quam. Morbi sit amet cursus libero. Nunc at leo laoreet, molestie dui vitae, sollicitudin felis. Suspendisse quis magna ac odio interdum tincidunt volutpat eget sem. Quisque tempus malesuada condimentum. Fusce nec rhoncus eros. Aenean semper maximus efficitur. Etiam mattis urna vel aliquam tristique. In fringilla leo sed tellus vehicula rhoncus. Vestibulum vulputate auctor blandit. 
+            </p>
+            </div>
+    </section>
+
+    <section id="shapes">
+        <h3>About Me</h3>
+        
+        <img src="images/roundYellow.png" alt="an image of a large yellow circle">
+        
+        <p>I floated the image of a yellow circle to the left of this section. Then set the shape-outside property to "circle(50%)" so that the text will wrap around it.</p>
+        
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed blandit turpis, sed tempus mauris. Integer vestibulum velit felis, sit amet posuere ante commodo id. Aenean eu malesuada libero, in tempus diam. Nulla bibendum ante eu odio consectetur molestie. Fusce finibus odio velit, ut elementum augue pretium vitae. Aenean efficitur, dolor eu imperdiet porta, magna neque placerat mi, ac tempus leo est ut lacus. Nam aliquet dolor arcu, nec ultricies est venenatis id. Proin placerat augue eu nunc condimentum rhoncus. Mauris fringilla est ac condimentum mollis. Duis diam purus, sodales quis risus et, mattis elementum purus
+        </p>
+        
+        <p>
+            Morbi imperdiet purus id volutpat varius. Quisque posuere, nunc nec commodo vestibulum, dolor justo aliquet turpis, eget sagittis nulla eros nec augue. Ut non cursus nunc, at pulvinar sapien. In nec placerat enim. Phasellus sit amet ligula non risus auctor dapibus et convallis odio. Donec egestas ante quis felis faucibus efficitur. Fusce condimentum ex elit, ac egestas sem commodo sed. Sed sodales ex aliquet iaculis finibus. Nam porta mi ut dolor eleifend, vel semper tellus sodales. Phasellus bibendum nunc ligula, at eleifend ante elementum vitae. Praesent vestibulum ac libero quis faucibus. 
+        </p>
+        
+        <p>
+            Sed euismod venenatis erat at lobortis. Curabitur sed venenatis quam. Morbi sit amet cursus libero. Nunc at leo laoreet, molestie dui vitae, sollicitudin felis. Suspendisse quis magna ac odio interdum tincidunt volutpat eget sem. Quisque tempus malesuada condimentum. Fusce nec rhoncus eros. Aenean semper maximus efficitur. Etiam mattis urna vel aliquam tristique. In fringilla leo sed tellus vehicula rhoncus. Vestibulum vulputate auctor blandit. 
+        </p>
+        
+    </section>
+
+  
+    <section id="cardSection">
+        <h3>Cards</h3>
+        
+        <div id="cards">
+           
+            <blockquote class="card">
+            I used blockquote elements for the cards since I already had a style rule for the borders and background colors of blockquoted. Then I put all these blockquotes in a div with id "cards" so that I could set everything in this div as a flex container. I also gave each blockquote a class of "card" so I could set the card's content to flex, and add min and max widths. This allows the cards to slightly grow and shrink without filling the entire width of the page, and the flex wrapping can rearrange the cards as needed.
+            </blockquote>
+            
+            <blockquote class="card">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed blandit turpis, sed tempus mauris. Integer vestibulum velit felis, sit amet posuere ante commodo id.
+            </blockquote>
+            
+            <blockquote class="card">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed blandit turpis, sed tempus mauris. Integer vestibulum velit felis, sit amet posuere ante commodo id.
+            </blockquote>
+            
+            <blockquote class="card">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed blandit turpis, sed tempus mauris. Integer vestibulum velit felis, sit amet posuere ante commodo id.
+            </blockquote>
+            
+        </div>
+    </section>
+
+
+
+<footer>
+    <p class="copyrighttext">
+           Copyright &copy; 2022 Kelbe Fox
+    </p>
+</footer>
+
+  </main>
+
+</body>
+
+</html>
