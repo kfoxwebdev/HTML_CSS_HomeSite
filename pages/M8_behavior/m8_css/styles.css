@@ -1,0 +1,72 @@
+/* ---------- M8 Disclosure Widget Rules ---------- */
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: var(--details-height-open, "100%");
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: var(--details-height-open, "100%");
+  }
+}
+html {
+  --details-transition-time: 400ms;
+}
+
+details {
+  -webkit-transition: all ease-out var(--details-transition-time, 0);
+  transition: all ease-out var(--details-transition-time, 0);
+  max-height: var(--details-height-closed, auto);
+}
+
+details[open] {
+  max-height: var(--details-height-open, auto);
+}
+
+details div {
+  -webkit-transition: all ease-out var(--details-transition-time, 0);
+  transition: all ease-out var(--details-transition-time, 0);
+  max-height: var(--details-content-height-closed, auto);
+  overflow: hidden;
+  -webkit-animation-name: slideDown;
+          animation-name: slideDown;
+  -webkit-animation-duration: var(--details-transition-time);
+          animation-duration: var(--details-transition-time);
+}
+
+details.is--open div {
+  max-height: var(--details-content-height-open, auto);
+}
+
+/* ---------- M8 Scroll to Top Button Rules ---------- */
+.m8page__scrollButton {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: block;
+  padding: 8px 4px;
+  cursor: pointer;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.5s;
+  transition: opacity 0.3s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.3s;
+  transition: transform 0.5s, opacity 0.3s, -webkit-transform 0.5s;
+}
+
+.m8page__scrollButton--show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}

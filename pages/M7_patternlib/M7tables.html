@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en" class="everyPage__htmlElement">
+
+<head>
+  <title>KFox HTML CSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+
+<body class="everyPage__body">
+
+  <header class="everyPage__header">
+    <h1>KFox Portfolio - HTML &amp; CSS</h1>
+  </header>
+
+  <a class="visually-hidden" href="#skip2main">Skip to main content</a>
+
+  <nav class="everyPage__primaryNav">
+    <menu class="everyPage__primaryNavList">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../pages/contact.html">Contact</a></li>
+        <li id="projectsbutton"><a href="../../pages/projects.html">Projects</a></li>
+        <li><a href="../M6_blog/index.html">TIL</a></li>
+    </menu>
+  </nav>
+
+  <main class="everyPage__main" id="skip2main">
+
+    <a href="index.html">Back to Pattern Library Homepage</a>
+
+    <h1>
+        Pattern Library: Tables
+    </h1>
+        
+        
+        
+    <section class="m7patternLib__elementBox">
+	    
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+            Table: Two Column
+        </h2>
+        
+        <p class="butlerWebDev__description">
+        A &lt;table&gt; containing a descriptive &lt;caption&gt;, and a &lt;tbody&gt; holding the rows and two columns.
+        </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <table class="butlerWebDev__table">
+                <caption class="butlerWebDev__tableCaption">
+                  Syntax for CSS3 structural Pseudo-class selectors
+                </caption>
+                  
+                <tbody class="butlerWebDev__tableBody">
+                   
+                    <tr class="butlerWebDev__tableTR">
+                      <th scope="col" class="butlerWebDev__tableTH">Syntax</th>
+                      <th scope="col" class="butlerWebDev__tableTH">Description</th>
+                    </tr>
+                    
+                    <tr class="butlerWebDev__tableTR">
+                      <td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold">:nth-child(n)</td>
+                      <td class="butlerWebDev__tableTD">nth child of parent</td>
+                    </tr>
+                    
+                    <tr class="butlerWebDev__tableTR">
+                      <td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold">:nth-last-child(n)</td>
+                      <td class="butlerWebDev__tableTD">nth child of parent counting backwards</td>
+                    </tr>
+                    
+                    <tr class="butlerWebDev__tableTR">
+                      <td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold">:nth-of-type(n)</td>
+                      <td class="butlerWebDev__tableTD">nth element of its type within parent</td>
+                    </tr>
+                    
+                    <tr class="butlerWebDev__tableTR">
+                      <td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold">:nth-last-of-type(n)</td>
+                      <td class="butlerWebDev__tableTD">nth element of its type counting backwards</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+            Usage:
+        </h4>
+        
+        <p class="butlerWebDev__usage">
+        These tables are used to organize sets of information in situations where a list-element would not be adequate. They are typically found in tutorials or other resource pages.
+        </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+        
+            &lt;table class="butlerWebDev__table"&gt;
+                &lt;caption class="butlerWebDev__tableCaption"&gt;
+                    Caption content goes here
+                &lt;/caption&gt;
+                
+                &lt;tbody class="butlerWebDev__tableBody"&gt;
+                   
+                    &lt;tr class="butlerWebDev__tableTR&gt;
+                        &lt;th scope="col" class="butlerWebDev__tableTH"&gt; column name &lt;/th&gt;
+                        &lt;th scope="col" class="butlerWebDev__tableTH"&gt; column name  &lt;/th&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr class="butlerWebDev__tableTR&gt;
+                        &lt;td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold"&gt; data here &lt;/td&gt;
+                        &lt;td class="butlerWebDev__tableTD"&gt; data here &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr class="butlerWebDev__tableTR&gt;
+                        &lt;td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold"&gt; data here &lt;/td&gt;
+                        &lt;td class="butlerWebDev__tableTD"&gt; data here &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        </pre>
+        
+    </section>
+
+
+
+<section class="m7patternLib__elementBox">
+	    
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+            Table: Three Column
+        </h2>
+        
+        <p class="butlerWebDev__description">
+        A &lt;table&gt; containing a descriptive &lt;caption&gt;, and a &lt;tbody&gt; holding the rows and three columns. Additional &lt;td&gt; elements could be added to increase the number of columns as needed, but the website mainly has tables with only two or three.
+        </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <table class="butlerWebDev__table">
+                <caption class="butlerWebDev__tableCaption">
+                  Syntax Contextual Selectors
+                </caption>
+                  
+                <tbody class="butlerWebDev__tableBody">
+                   
+                    <tr class="butlerWebDev__tableTR">
+                        <th scope="col" class="butlerWebDev__tableTH">Selector</th>
+                        <th scope="col" class="butlerWebDev__tableTH">Syntax</th>
+                        <th scope="col" class="butlerWebDev__tableTH">Description</th>
+                    </tr>
+                    
+                    <tr class="butlerWebDev__tableTR">
+                        <td class="butlerWebDev__tableTD">Descendant</td>
+                        <td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold">#main li</td>
+                        <td class="butlerWebDev__tableTD">selects elements only when they are descendants of a higher-level element</td>
+                    </tr>
+                    
+                    <tr class="butlerWebDev__tableTR">
+                        <td class="butlerWebDev__tableTD">Adjacent sibling</td>
+                        <td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold">h2+p</td>
+                        <td class="butlerWebDev__tableTD">selects sibling element that is adjacent to (next to) another element </td>
+                    </tr>
+                    
+                    <tr class="butlerWebDev__tableTR">
+                        <td class="butlerWebDev__tableTD">Child</td>
+                        <td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold">blockquote&gt;p</td>
+                        <td class="butlerWebDev__tableTD">selects elements only when they are child elements of the parent element</td>
+                    </tr>
+                    
+                    <tr class="butlerWebDev__tableTR">
+                        <td class="butlerWebDev__tableTD">General Sibling</td>
+                        <td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold">h2~p</td>
+                        <td class="butlerWebDev__tableTD">selects any elements that are siblings to another element</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+            Usage:
+        </h4>
+        
+        <p class="butlerWebDev__usage">
+        These tables are used to organize sets of information in situations where a list-element would not be adequate. They are typically found in tutorials or other resource pages.
+        </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+        
+            &lt;table class="butlerWebDev__table"&gt;
+                &lt;caption class="butlerWebDev__tableCaption"&gt;
+                    Caption content goes here
+                &lt;/caption&gt;
+                
+                &lt;tbody class="butlerWebDev__tableBody"&gt;
+                   
+                    &lt;tr class="butlerWebDev__tableTR&gt;
+                        &lt;th scope="col" class="butlerWebDev__tableTH"&gt; column name &lt;/th&gt;
+                        &lt;th scope="col" class="butlerWebDev__tableTH"&gt; column name  &lt;/th&gt;
+                        &lt;th scope="col" class="butlerWebDev__tableTH"&gt; column name  &lt;/th&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr class="butlerWebDev__tableTR&gt;
+                        &lt;td class="butlerWebDev__tableTD"&gt; data here &lt;/td&gt;
+                        &lt;td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold"&gt; data here &lt;/td&gt;
+                        &lt;td class="butlerWebDev__tableTD"&gt; data here &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    &lt;tr class="butlerWebDev__tableTR&gt;
+                        &lt;td class="butlerWebDev__tableTD"&gt; data here &lt;/td&gt;
+                        &lt;td class="butlerWebDev__tableTD butlerWebDev__tableTD--bold"&gt; data here &lt;/td&gt;
+                        &lt;td class="butlerWebDev__tableTD"&gt; data here &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        </pre>
+        
+    </section>
+
+
+
+<footer class="everyPage__footer">
+           Copyright &copy; 2022 Kelbe Fox
+</footer>
+
+  </main>
+
+</body>
+
+</html>

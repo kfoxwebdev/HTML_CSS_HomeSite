@@ -1,0 +1,63 @@
+
+
+
+/* ---------- M8 Disclosure Widget Rules ---------- */
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: var(--details-height-open, '100%');
+  }
+}
+
+html {
+  --details-transition-time: 400ms;
+}
+
+details {
+  transition: all ease-out var(--details-transition-time, 0);
+  max-height: var(--details-height-closed, auto);
+}
+
+details[open] {
+  max-height: var(--details-height-open, auto);
+
+}
+
+details div {
+  transition: all ease-out var(--details-transition-time, 0);
+  max-height: var(--details-content-height-closed, auto);
+  overflow: hidden;
+  animation-name: slideDown;
+  animation-duration: var(--details-transition-time);
+}
+
+details.is--open div {
+  max-height: var(--details-content-height-open, auto);
+}
+
+
+
+/* ---------- M8 Scroll to Top Button Rules ---------- */
+
+.m8page__scrollButton {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: block;
+  padding: 8px 4px;
+  cursor: pointer;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+}
+
+.m8page__scrollButton--show {
+  transform: translateY(0);
+  opacity: 1;
+}
+

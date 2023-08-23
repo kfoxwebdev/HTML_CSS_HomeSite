@@ -1,0 +1,165 @@
+@import "variables.scss";
+
+@import "mixins.scss";
+
+
+
+
+
+
+/* Fonts: font families, colors, size, line-height, etc for all the text on the site */
+
+.everyPage__htmlElement {
+    font-family: 'Roboto', Verdana, Tahoma, sans-serif;
+    color: $bodyTextColor;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+.everyPage__header{
+    h1{
+        font-family: 'Bebas Neue', Verdana, Tahoma, sans-serif;
+        color: $headerTextcolor;
+        text-align: center;
+        font-size: 2.25em;
+        line-height: 1;
+        padding: 1em 0;
+        margin: 0;
+    }
+}
+
+
+.everyPage__footer {
+    font-size: 0.9em;
+    font-style: italic;
+    bottom: 0;
+}
+
+
+.italic {
+    font-style: italic;
+}
+
+
+
+/* ---------- main nav menu font styles ---------- */
+
+    /* The link-text stays the same color even if they've been clicked, but background color changes for hover and active states. */
+
+.everyPage__primaryNavList{
+    li {
+        a {
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            padding: .5em 1em;
+            text-decoration: none;
+                &:link { 
+                    color: $navbarTextColor;	
+                }
+
+                &:visited { 
+                    color: $navbarTextColor; 
+                }
+
+                &:hover {
+                    color: $navbarTextColor;
+                    background-color: $navbarBackgroundHover;
+                }	
+
+                &:active {
+                    color: $navbarTextColor;
+                    background-color: $navbarBackgroundActive;
+                }
+        }
+    }
+}
+
+
+
+/* ---------- M7 Butler Web Development Page Font Styles ---------- */
+
+.m7patternLib__elementBox {
+    background-color: #fff;
+    color: #444;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+.butlerWebDev__h1, .butlerWebDev__h2 {
+    color: #43125F;
+    font-size: 2em;
+}
+
+.butlerWebDev__h3 {
+    font-size: 1.5em;
+}
+
+.butlerWebDev__h4 {
+    font-size: 1.125em;
+}
+    
+.butlerWebDev__h1, .butlerWebDev__h2, .butlerWebDev__h3, .butlerWebDev__h4 {
+    margin-bottom: .25em;
+    margin-top: 1em;
+}
+
+.butlerWebDev__link {
+    &:link { 
+        color: #43125F;	
+    }
+
+    &:visited { 
+        color: #43125F; 
+    }
+
+    &:hover {
+        color: #333;
+    }	
+
+    &:active {
+        color: #333;
+    }
+}
+
+.butlerWebDev__pageHeaderLink {
+    text-decoration: none;
+}
+
+.butlerWebDev__primaryNavList{
+    li {
+        a {
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            padding: .5em 1em;
+            text-decoration: none;
+                &:link { 
+                    color: $m7white;	
+                }
+
+                &:visited { 
+                    color: $m7white; 
+                }
+
+                &:hover {
+                    color: $m7white;
+                    background-color: $m7tablePurple;
+                }	
+
+                &:active {
+                    color: $m7white;
+                    background-color: $m7tablePurple;
+                }
+        }
+    }
+}
+
+

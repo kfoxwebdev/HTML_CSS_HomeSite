@@ -1,0 +1,35 @@
+
+
+    <section class="m7patternLib__elementBox">
+	
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+		Element Name Here
+	</h2>
+        
+        <p class="butlerWebDev__description">
+	Description of the element(s) goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+        
+        <div class="butlerWebDev__liveEx">
+            various elements can go here, "live examples" of each component
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+		Usage:
+	</h4>
+        
+        <p class="butlerWebDev__usage">
+	"usage" of each element, as in how they're actually used on the pages. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	</p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+
+            &lt;elementName class="words__stuff"&gt;
+                element content
+            &lt;/elementName&gt;
+        </pre>
+        
+    </section>
+

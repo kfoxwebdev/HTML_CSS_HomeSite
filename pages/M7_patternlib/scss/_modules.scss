@@ -1,0 +1,160 @@
+
+
+
+
+
+
+/* Modules: items that can be used multiple times per page */
+
+/* ---------- Gallery Thumbnail Rules ---------- */
+
+.photoGal__thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;          
+}
+
+.thumbnail {
+    height: 200px;
+    width: auto;
+    margin: 1em;
+}
+
+.photoGal__thumbnails { 
+	a {
+    	transition: .3s ease-in-out;
+		&:hover {
+    		transform: scale(1.2);
+		}
+	}
+}
+
+
+
+/* ---------- Section Rules ---------- */
+
+    /* just to add a bit of space and a border under section-elements */
+
+.everyPage__section {
+    padding-bottom: 1em;
+    border-bottom: .1em solid #bebebe;
+}
+
+
+
+/* ---------- Blockquote rules ---------- */
+
+.everyPage__blockquote {
+    background-color: white;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+
+
+/* ---------- M6 article / TIL post rules ---------- */
+
+.m6article__summary, .m6article__fullArticle {
+    background-color: white;
+    padding: 1em;
+    
+    ul {
+        list-style-type: none;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+/* ---------- M7 Pattern Library Sections ---------- */
+
+
+.m7patternLib__elementBox {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+    
+.butlerWebDev__liveEx {
+    margin: 0 3%;
+    padding: 1em;
+    border: .2em solid $m7codeNtableGrey;
+    border-radius: .5em;
+}
+    
+.butlerWebDev__code {
+    background-color: $m7codeNtableGrey;
+    padding: .5em 1em;
+    overflow: auto;
+}
+
+
+
+/* ---------- M7 Pattern Library general image rules ---------- */
+
+.butlerWebDev__img {
+    max-width: 100%;
+}
+
+
+
+/* ---------- M7 Pattern Library article image rules ---------- */
+
+.butlerWebDev__img--articleImg {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.butlerWebDev__img--articleImg-PullRight {
+    float: right;
+}
+
+.butlerWebDev__img--articleImg-PullLeft {
+    float: left;
+}
+
+
+
+/* ---------- M7 Pattern Library article table rules ---------- */
+
+.butlerWebDev__table {
+    margin: 1em;
+    border: 3px solid $m7black;
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+.butlerWebDev__tableCaption {
+    font-style: italic;
+    padding-top: 0.5em;
+}
+
+.butlerWebDev__tableTH {
+    background-color: $m7tablePurple;
+    color: $m7white;
+    font-weight: bold;
+}
+
+.butlerWebDev__tableTR:nth-child(2n+1) {
+    background-color: $m7codeNtableGrey; 
+}
+
+.butlerWebDev__tableTH, .butlerWebDev__tableTD {
+    border: dotted 1px $m7darkerGrey;
+    padding: 0.5em 1em;
+}
+
+.butlerWebDev__tableTD--bold {
+    font-weight: bold;
+}
+
+
+
+
+
+

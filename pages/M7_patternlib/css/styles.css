@@ -1,0 +1,527 @@
+/* Base: general rules for the foundational components of the site */
+/* ---------- General sizing: border box with inheriting ---------- */
+.everyPage__htmlElement {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* ---------- main page/body colors & styles ---------- */
+.everyPage__htmlElement {
+  background-color: rgb(36, 52, 30);
+}
+
+.everyPage__body {
+  background-color: rgb(228, 226, 218);
+  -webkit-box-shadow: 0 1px 4px 1px #17171a;
+          box-shadow: 0 1px 4px 1px #17171a;
+}
+
+/* Fonts: font families, colors, size, line-height, etc for all the text on the site */
+.everyPage__htmlElement {
+  font-family: "Roboto", Verdana, Tahoma, sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+.everyPage__header h1 {
+  font-family: "Bebas Neue", Verdana, Tahoma, sans-serif;
+  color: rgb(168, 58, 58);
+  text-align: center;
+  font-size: 2.25em;
+  line-height: 1;
+  padding: 1em 0;
+  margin: 0;
+}
+
+.everyPage__footer {
+  font-size: 0.9em;
+  font-style: italic;
+  bottom: 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* ---------- main nav menu font styles ---------- */
+/* The link-text stays the same color even if they've been clicked, but background color changes for hover and active states. */
+.everyPage__primaryNavList li a {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+.everyPage__primaryNavList li a:link {
+  color: rgb(228, 226, 218);
+}
+.everyPage__primaryNavList li a:visited {
+  color: rgb(228, 226, 218);
+}
+.everyPage__primaryNavList li a:hover {
+  color: rgb(228, 226, 218);
+  background-color: rgb(77, 77, 77);
+}
+.everyPage__primaryNavList li a:active {
+  color: rgb(228, 226, 218);
+  background-color: rgb(39, 39, 39);
+}
+
+/* ---------- M7 Butler Web Development Page Font Styles ---------- */
+.m7patternLib__elementBox {
+  background-color: #fff;
+  color: #444;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+.butlerWebDev__h1, .butlerWebDev__h2 {
+  color: #43125F;
+  font-size: 2em;
+}
+
+.butlerWebDev__h3 {
+  font-size: 1.5em;
+}
+
+.butlerWebDev__h4 {
+  font-size: 1.125em;
+}
+
+.butlerWebDev__h1, .butlerWebDev__h2, .butlerWebDev__h3, .butlerWebDev__h4 {
+  margin-bottom: 0.25em;
+  margin-top: 1em;
+}
+
+.butlerWebDev__link:link {
+  color: #43125F;
+}
+.butlerWebDev__link:visited {
+  color: #43125F;
+}
+.butlerWebDev__link:hover {
+  color: #333;
+}
+.butlerWebDev__link:active {
+  color: #333;
+}
+
+.butlerWebDev__pageHeaderLink {
+  text-decoration: none;
+}
+
+.butlerWebDev__primaryNavList li a {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+.butlerWebDev__primaryNavList li a:link {
+  color: #fff;
+}
+.butlerWebDev__primaryNavList li a:visited {
+  color: #fff;
+}
+.butlerWebDev__primaryNavList li a:hover {
+  color: #fff;
+  background-color: #4A176C;
+}
+.butlerWebDev__primaryNavList li a:active {
+  color: #fff;
+  background-color: #4A176C;
+}
+
+/* Components: used on most pages, but only once per page */
+/* ---------- Header Background/Image Rules ---------- */
+.everyPage__header {
+  background-image: url("../images/bannerPic.jpg");
+  background-size: cover;
+  background-color: #333;
+}
+
+/* To visually hide skip links */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* To make skip links visible on focus */
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+/* ---------- main nav bar positioning & styles ---------- */
+.everyPage__primaryNav {
+  position: relative;
+}
+.everyPage__primaryNav .everyPage__primaryNavList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* ---------- M7 Pattern Library Colors Section ---------- */
+.butlerWebDev__liveEx--colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.butlerWebDev__colorEx {
+  padding: 2em;
+  border: 0.2em solid white;
+  border-radius: 0.5em;
+  color: white;
+}
+
+#m7mainPurple {
+  background-color: #43125F;
+}
+
+#m7tablePurple {
+  background-color: #4A176C;
+}
+
+#m7butlerBrown {
+  background-color: #B99C6B;
+}
+
+#m7black {
+  background-color: #000;
+}
+
+#m7darkerGrey {
+  background-color: #333;
+}
+
+#m7bodyGrey {
+  background-color: #444;
+}
+
+#m7codeNtableGrey {
+  background-color: #E0E0E0;
+  color: black;
+}
+
+#m7blockquoteGrey {
+  background-color: #EFEFEF;
+  color: black;
+}
+
+#m7white {
+  background-color: #fff;
+  color: black;
+  border: 0.2em solid #EFEFEF;
+}
+
+/* ---------- M7 Pattern Library Notes Section ---------- */
+.butlerWebDev__notes {
+  background-color: #EFEFEF;
+  border: 1px solid #000;
+  padding: 0 1em;
+  margin: 0 1.5em;
+}
+
+/* ---------- M7 Pattern Library Code Block Section ---------- */
+.butlerWebDev__codeFigCap {
+  font-size: 0.8125em;
+  font-style: italic;
+  line-height: 1.3em;
+  padding-top: 0.5em;
+}
+
+/* ---------- M7 Pattern Library Description List Section ---------- */
+.butlerWebDev__dt {
+  font-weight: bold;
+}
+
+.butlerWebDev__dd {
+  margin-bottom: 1em;
+}
+
+/* ---------- M7 Pattern Library Article Section ---------- */
+.butlerWebDev__artHeader {
+  border-bottom: 0.09em solid #E0E0E0;
+  font-size: 0.875em;
+  padding-bottom: 0.5em;
+}
+
+.butlerWebDev__artFooterDisclaimers {
+  border-top: 0.09em solid #E0E0E0;
+  font-size: 0.8em;
+}
+
+.butlerWebDev__fa {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+.butlerWebDev__cclicense {
+  float: left;
+}
+
+/* ---------- M7 Pattern Library Footer Section ---------- */
+.butlerWebDev__mainFooter {
+  margin-top: 1em;
+  border-top: 3px solid #43125F;
+  text-align: center;
+}
+
+/* ---------- M7 Pattern Library Captioned Images Section ---------- */
+.butlerWebDev__figure {
+  margin: 1em;
+}
+
+.butlerWebDev__figcaption {
+  font-size: 0.8125em;
+  font-style: italic;
+  line-height: 1.3em;
+  padding-top: 0.5em;
+}
+
+/* ---------- M7 Pattern Library Header Section ---------- */
+.butlerWebDev__pageHeader {
+  border-bottom: 3px solid #43125F;
+}
+
+/* ---------- M7 Pattern Library Nav Bar Section ---------- */
+.butlerWebDev__primaryNav {
+  position: relative;
+}
+.butlerWebDev__primaryNav .butlerWebDev__primaryNavList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #43125F;
+}
+
+/* Modules: items that can be used multiple times per page */
+/* ---------- Gallery Thumbnail Rules ---------- */
+.photoGal__thumbnails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.thumbnail {
+  height: 200px;
+  width: auto;
+  margin: 1em;
+}
+
+.photoGal__thumbnails a {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.photoGal__thumbnails a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* ---------- Section Rules ---------- */
+/* just to add a bit of space and a border under section-elements */
+.everyPage__section {
+  padding-bottom: 1em;
+  border-bottom: 0.1em solid #bebebe;
+}
+
+/* ---------- Blockquote rules ---------- */
+.everyPage__blockquote {
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+/* ---------- M6 article / TIL post rules ---------- */
+.m6article__summary, .m6article__fullArticle {
+  background-color: white;
+  padding: 1em;
+}
+.m6article__summary ul, .m6article__fullArticle ul {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* ---------- M7 Pattern Library Sections ---------- */
+.m7patternLib__elementBox {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.butlerWebDev__liveEx {
+  margin: 0 3%;
+  padding: 1em;
+  border: 0.2em solid #E0E0E0;
+  border-radius: 0.5em;
+}
+
+.butlerWebDev__code {
+  background-color: #E0E0E0;
+  padding: 0.5em 1em;
+  overflow: auto;
+}
+
+/* ---------- M7 Pattern Library general image rules ---------- */
+.butlerWebDev__img {
+  max-width: 100%;
+}
+
+/* ---------- M7 Pattern Library article image rules ---------- */
+.butlerWebDev__img--articleImg {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+.butlerWebDev__img--articleImg-PullRight {
+  float: right;
+}
+
+.butlerWebDev__img--articleImg-PullLeft {
+  float: left;
+}
+
+/* ---------- M7 Pattern Library article table rules ---------- */
+.butlerWebDev__table {
+  margin: 1em;
+  border: 3px solid #000;
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+.butlerWebDev__tableCaption {
+  font-style: italic;
+  padding-top: 0.5em;
+}
+
+.butlerWebDev__tableTH {
+  background-color: #4A176C;
+  color: #fff;
+  font-weight: bold;
+}
+
+.butlerWebDev__tableTR:nth-child(2n+1) {
+  background-color: #E0E0E0;
+}
+
+.butlerWebDev__tableTH, .butlerWebDev__tableTD {
+  border: dotted 1px #333;
+  padding: 0.5em 1em;
+}
+
+.butlerWebDev__tableTD--bold {
+  font-weight: bold;
+}
+
+/* Layout: dedfault sizing is for smartphones, with media queries for larger screens */
+/* ---------- default/smartphone layout rules ---------- */
+.everyPage__body {
+  margin: 0%;
+}
+
+.everyPage__main {
+  padding: 0 8%;
+}
+
+/* ---------- tablet layout rules ---------- */
+@media screen and (min-width: 650px) {
+  .everyPage__body {
+    margin: 0% 5%;
+  }
+  .everyPage__header h1 {
+    font-size: 3.5em;
+  }
+  .everyPage__primaryNav {
+    /* these rules make the Nav bar stick to the top of the screen as users scroll down */ /* Safari */
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  .m6article__summary picture, .m6article__fullArticle picture {
+    float: left;
+    padding: 1em;
+  }
+  .m6article__summary ul, .m6article__fullArticle ul {
+    clear: left;
+  }
+  .m6article__summary p, .m6article__fullArticle p {
+    padding: 1em 0 0 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .everyPage__body {
+    margin: 0% 15%;
+  }
+}
+/* ---------- desktop layout rules ---------- */
+@media screen and (min-width: 1400px) {
+  .everyPage__body {
+    margin: 0% auto;
+    max-width: 950px;
+  }
+}

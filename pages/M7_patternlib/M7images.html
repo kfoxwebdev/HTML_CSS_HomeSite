@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en" class="everyPage__htmlElement">
+
+<head>
+  <title>KFox HTML CSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+
+<body class="everyPage__body">
+
+  <header class="everyPage__header">
+    <h1>KFox Portfolio - HTML &amp; CSS</h1>
+  </header>
+
+  <a class="visually-hidden" href="#skip2main">Skip to main content</a>
+
+  <nav class="everyPage__primaryNav">
+    <menu class="everyPage__primaryNavList">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../pages/contact.html">Contact</a></li>
+        <li id="projectsbutton"><a href="../../pages/projects.html">Projects</a></li>
+        <li><a href="../M6_blog/index.html">TIL</a></li>
+    </menu>
+  </nav>
+
+  <main class="everyPage__main" id="skip2main">
+
+    <a href="index.html">Back to Pattern Library Homepage</a>
+
+    <h1>
+        Pattern Library: Images
+    </h1>
+    
+    
+    
+    <section class="m7patternLib__elementBox">
+    
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+		Butler Logo (Main Page Footer)
+	    </h2>
+        
+        <p class="butlerWebDev__description">
+	    The footer on every page contains a short &lt;p&gt; with a &lt;br&gt;, then an &lt;img&gt; element placed inside an &lt;a&gt; which links to the butlercc.edu website.
+	    </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <footer class="butlerWebDev__mainFooter">
+                <p>
+                Generously Provided by
+                    <br>
+                    <a href="https://www.butlercc.edu/">
+                        <img src="images/Butler_Horiz_206a.png" alt="Butler Community College" class="butlerWebDev__img" width="206" height="64">
+                    </a>
+                </p>
+            </footer>
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+		Usage:
+	    </h4>
+        
+        <p class="butlerWebDev__usage">
+	    This specifically sized &lt;img&gt; appears in the footer of every page, placed inside an &lt;a&gt; which links to the butlercc.edu website.
+	    </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+           
+            &lt;footer class="butlerWebDev__mainFooter"&gt;
+                &lt;p&gt;
+                Generously Provided by
+                    &lt;br&gt;
+                    &lt;a href="https://www.butlercc.edu/"&gt;
+                        &lt;img src="/images/Butler_Horiz_206a.png"
+                            alt="Butler Community College"
+                            class="butlerWebDev__img"
+                            width="206"
+                            height="64"&gt;
+                    &lt;/a&gt;
+                &lt;/p&gt;
+            &lt;/footer&gt;
+        </pre>
+        
+    </section>
+
+
+
+    <section class="m7patternLib__elementBox">
+	
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+		    Captioned Images
+	    </h2>
+        
+        <p class="butlerWebDev__description">
+	    A &lt;figure&gt; containing an &lt;img&gt; and &lt;figcaption&gt;.
+	    </p>
+        
+        <div class="butlerWebDev__liveEx">
+           
+            <figure class="butlerWebDev__figure">
+                <img src="images/pixels.jpg" 
+                    alt="zoomed in segment of arc showing pixels"
+                    class="butlerWebDev__img butlerWebDev__img--articleImg">
+                <figcaption class="butlerWebDev__figcaption">
+                    Zoomed in segment of an arc, shows individual square pixels that make up the image.
+                </figcaption>
+            </figure>
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+		Usage:
+	    </h4>
+        
+        <p class="butlerWebDev__usage">
+	    "usage" of each element, as in how they're actually used on the pages. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	    </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+
+            &lt;figure class="butlerWebDev__figure"&gt;
+                &lt;img src="images/pixels.jpg" 
+                    alt="zoomed in segment of arc showing pixels"
+                    class="butlerWebDev__img butlerWebDev__img--articleImg"&gt;
+                &lt;figcaption class="butlerWebDev__figcaption"&gt;
+                caption goes here
+                 &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        </pre>
+        
+    </section>
+    
+    
+    
+    <section class="m7patternLib__elementBox">
+	
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+		Article Image
+	    </h2>
+        
+        <p class="butlerWebDev__description">
+        A standard &lt;img&gt; used within any &lt;article&gt;.
+        </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <img src="images/xampp-win-download.jpg" 
+                alt="screenshot of XAMPP for windows download files"
+                class="butlerWebDev__img butlerWebDev__img--articleImg">
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+            Usage:
+        </h4>
+        
+        <p class="butlerWebDev__usage">
+        This type of &lt;img&gt; is used for any generic picture in an article, usually a screenshot to help with a tutorial.
+        </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+
+            &lt;img src="images/xampp-win-download.jpg" 
+                alt="screenshot of XAMPP for windows download files"
+                class="butlerWebDev__img butlerWebDev__img--articleImg"&gt;
+        </pre>
+        
+    </section>
+    
+    
+    
+    <section class="m7patternLib__elementBox">
+	    
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+            Article Image: Inline
+        </h2>
+        
+        <p class="butlerWebDev__description">
+        This type of &lt;img&gt; is also used for inline pictures in an article, and is floated to the left or right of the surrounding text.
+        </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <p>
+                <img src="images/fireftp_logo.png" 
+                alt="fireftp logo"
+                class="butlerWebDev__img butlerWebDev__img--articleImg butlerWebDev__img--articleImg-PullRight">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            
+            <br>
+            
+            <p>
+                <img src="images/fireftp_logo.png" 
+                alt="fireftp logo"
+                class="butlerWebDev__img butlerWebDev__img--articleImg butlerWebDev__img--articleImg-PullLeft">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+            Usage:
+        </h4>
+        
+        <p class="butlerWebDev__usage">
+        These images are occasionally used to accent or add context to textual information (in this case, a PNG with a transparent background - the logo for a company called FireFTP). They are contained within a &lt;p&gt;.
+        </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <p>
+        Right-floated:
+        </p>
+        
+        <pre class="butlerWebDev__code">
+
+            &lt;p&gt;
+                &lt;img src="images/fireftp_logo.png" 
+                alt="fireftp logo"
+                class="butlerWebDev__img butlerWebDev__img--articleImg butlerWebDev__img--articleImg-PullRight"&gt;
+                
+                Text content here,  Lorem ipsum dolor...
+            &lt;/p&gt;
+        </pre>
+        
+        <p>
+        Left-floated:
+        </p>
+        
+        <pre class="butlerWebDev__code">
+
+            &lt;p&gt;
+                &lt;img src="images/fireftp_logo.png" 
+                alt="fireftp logo"
+                class="butlerWebDev__img butlerWebDev__img--articleImg butlerWebDev__img--articleImg-PullLeft"&gt;
+                
+                Text content here,  Lorem ipsum dolor...
+            &lt;/p&gt;
+        </pre>
+        
+    </section>
+
+
+
+
+
+
+<footer class="everyPage__footer">
+           Copyright &copy; 2022 Kelbe Fox
+</footer>
+
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en" class="everyPage__htmlElement">
+
+<head>
+  <title>KFox HTML CSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+
+<body class="everyPage__body">
+
+  <header class="everyPage__header">
+    <h1>KFox Portfolio - HTML &amp; CSS</h1>
+  </header>
+
+  <a class="visually-hidden" href="#skip2main">Skip to main content</a>
+
+  <nav class="everyPage__primaryNav">
+    <menu class="everyPage__primaryNavList">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../pages/contact.html">Contact</a></li>
+        <li id="projectsbutton"><a href="../../pages/projects.html">Projects</a></li>
+        <li><a href="../M6_blog/index.html">TIL</a></li>
+    </menu>
+  </nav>
+
+  <main class="everyPage__main" id="skip2main">
+
+    <a href="index.html">Back to Pattern Library Homepage</a>
+
+    <h1>
+        Pattern Library: Navigation
+    </h1>
+    
+
+
+<!-- PUT THE HEADER, FOOTER, and "NAVBAR" BREADCRUMBS ON THIS PAGE-->
+
+
+
+    <section class="m7patternLib__elementBox">
+	
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+            Main Page Header
+        </h2>
+        
+        <p class="butlerWebDev__description">
+        Every page has a &lt;header&gt; containing a &lt;div&gt; with branding information, and an &lt;h1&gt; containing an &lt;a&gt; link to the ButlerCC Webhosting homepage.
+        </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <header class="butlerWebDev__pageHeader clearfix">
+                <div class="butlerWebDev__pageHeaderBranding">
+                    <h1 class="butlerWebDev__h1">
+                        <a href="https://butlerccwebdev.net/index.php"
+                            class="butlerWebDev__link butlerWebDev__pageHeaderLink">
+                            ButlerCC Webhosting
+                        </a>
+                    </h1>
+                    <p>Free Webhosting for ButlerCC WebDev Students</p>
+                </div>
+            </header>
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+            Usage:
+        </h4>
+        
+        <p class="butlerWebDev__usage">
+        This element is at the top of every page, keeping the branding consistent and providing a link back to the site's homepage.
+        </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+
+            &lt;header class="butlerWebDev__pageHeader clearfix"&gt;
+                &lt;div class="butlerWebDev__pageHeaderBranding"&gt;
+                    &lt;h1 class="butlerWebDev__h1"&gt;
+                        &lt;a href="https://butlerccwebdev.net/index.php"
+                            class="butlerWebDev__link butlerWebDev__pageHeaderLink"&gt;
+                            ButlerCC Webhosting
+                        &lt;/a&gt;
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+            &lt;/header&gt;
+        </pre>
+        
+    </section>
+    
+    
+    
+    <section class="m7patternLib__elementBox">
+	
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+            Breadcrumb Links
+        </h2>
+        
+        <p class="butlerWebDev__description">
+        Currently, all pages use breadcrumb links instead of a navigation bar. They consist of a &lt;p&gt; containing &lt;a&gt; links. These links are placed at the top of the &lt;main&gt; element, but before any &lt;article&gt; elements or other content.
+        </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <p>
+                <a href="https://butlerccwebdev.net/index.php" class="butlerWebDev__link">Home</a>
+                &gt;
+                <a href="https://butlerccwebdev.net/support/index.php" class="butlerWebDev__link">Tutorials and Resources</a>
+                &gt;
+                Name of the current page
+            </p>
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+            Usage:
+        </h4>
+        
+        <p class="butlerWebDev__usage">
+        "usage" of each element, as in how they're actually used on the pages. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+
+            &lt;p&gt;
+                &lt;a href="/index.php" class="butlerWebDev__link"&gt;Home&lt;/a&gt;
+                &gt;
+                &lt;a href="/support/index.php" class="butlerWebDev__link"&gt;Tutorials and Resources&lt;/a&gt;
+                
+                    *ANY ADDITIONAL BREADCRUMB LINKS CAN BE ADDED HERE AS NEEDED*
+                
+                &gt;
+                Name of the current page
+            &lt;/p&gt;
+        </pre>
+        
+    </section>
+    
+    
+    
+    <section class="m7patternLib__elementBox">
+	
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+            Potential Design for a Nav Bar
+        </h2>
+        
+        <p class="butlerWebDev__description">
+        This &lt;nav&gt; could be added at the bottom of the header on each page.
+        </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <a class="visually-hidden" href="#main">Skip to main content</a>
+
+            <nav class="butlerWebDev__primaryNav">
+                <menu class="butlerWebDev__primaryNavList">
+                    <li><a href="https://www.butlercc.edu/">Home</a></li>
+                    <li><a href="https://butlerccwebdev.net/index.php">ButlerCC Webhosting</a></li>
+                    <li><a href="https://butlerccwebdev.net/support/">Tutorials &amp; Resources</a></li>
+                </menu>
+  </nav>            
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+            Usage:
+        </h4>
+        
+        <p class="butlerWebDev__usage">
+        This nav bar could increase the ease of navigation through the site. It could function alongside the breadcrumb links, or completely replace them.
+        </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+
+            &lt;a class="visually-hidden" href="#main"&gt;Skip to main content&lt;/a&gt;
+            
+            &lt;nav class="butlerWebDev__primaryNav"&gt;
+                &lt;menu class="butlerWebDev__primaryNavList"&gt;
+                    &lt;li&gt; &lt;a href="https://www.butlercc.edu/"&gt; Home &lt;/a&gt; &lt;/li&gt;
+                    &lt;li&gt; &lt;a href="https://butlerccwebdev.net/index.php""&gt; ButlerCC Webhosting &lt;/a&gt; &lt;/li&gt;
+                    &lt;li&gt; &lt;a href="https://butlerccwebdev.net/support/"&gt; Tutorials &amp; Resources &lt;/a&gt; &lt;/li&gt;
+                &lt;/menu&gt;
+            &lt;/nav&gt;
+        </pre>
+        
+    </section>
+    
+    
+    
+    <section class="m7patternLib__elementBox">
+    
+        <h2 class="butlerWebDev__h2 butlerWebDev__h2--title">
+		Main Page Footer
+	    </h2>
+        
+        <p class="butlerWebDev__description">
+	    The footer on every page contains a short &lt;p&gt; with a &lt;br&gt;, then an &lt;img&gt; element placed inside an &lt;a&gt; which links to the butlercc.edu website.
+	    </p>
+        
+        <div class="butlerWebDev__liveEx">
+            
+            <footer class="butlerWebDev__mainFooter">
+                <p>
+                Generously Provided by
+                    <br>
+                    <a href="https://www.butlercc.edu/">
+                        <img src="images/Butler_Horiz_206a.png" alt="Butler Community College" class="butlerWebDev__img" width="206" height="64">
+                    </a>
+                </p>
+            </footer>
+            
+        </div>
+        
+        <h4 class="butlerWebDev__h4">
+		Usage:
+	    </h4>
+        
+        <p class="butlerWebDev__usage">
+	    This specifically sized &lt;img&gt; appears in the footer of every page, placed inside an &lt;a&gt; which links to the butlercc.edu website.
+	    </p>
+        
+        <h4 class="butlerWebDev__h4">Markup</h4>
+        
+        <pre class="butlerWebDev__code">
+           
+            &lt;footer class="butlerWebDev__mainFooter"&gt;
+                &lt;p&gt;
+                Generously Provided by
+                    &lt;br&gt;
+                    &lt;a href="https://www.butlercc.edu/"&gt;
+                        &lt;img src="/images/Butler_Horiz_206a.png"
+                            alt="Butler Community College"
+                            class="butlerWebDev__img"
+                            width="206"
+                            height="64"&gt;
+                    &lt;/a&gt;
+                &lt;/p&gt;
+            &lt;/footer&gt;
+        </pre>
+        
+    </section>
+
+
+
+<footer class="everyPage__footer">
+           Copyright &copy; 2022 Kelbe Fox
+</footer>
+
+  </main>
+
+</body>
+
+</html>

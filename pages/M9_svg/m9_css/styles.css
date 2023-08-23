@@ -1,0 +1,35 @@
+
+/*---------- rules for SVG embedded with <img> element ----------*/
+
+.m9page__imgSVG {
+    width: 70%
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/*---------- rules for inline SVG ----------*/
+
+.m9__inlineSVG {
+    width: 70%;
+    height: 0;
+    padding-top: 75%; /* viewbox is "0 0 400 300" so (300/400)*100% = 75%  */
+    position: relative;
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    shape-outside: circle(40%);
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+

@@ -1,0 +1,244 @@
+
+
+
+
+
+
+/* Components: used on most pages, but only once per page */
+
+/* ---------- Header Background/Image Rules ---------- */
+
+.everyPage__header {
+    background-image: url("../images/bannerPic.jpg");
+    background-size: cover;
+    background-color: $navbarBackground;
+}
+
+
+
+/* To visually hide skip links */
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+
+/* To make skip links visible on focus */
+
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+
+
+/* ---------- main nav bar positioning & styles ---------- */
+
+.everyPage__primaryNav {
+    position: relative;
+    
+    .everyPage__primaryNavList {  
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: flex-start;
+		overflow: hidden;
+		background-color: #333;
+		}
+}
+
+
+
+
+
+/* ---------- M7 Pattern Library Colors Section ---------- */
+
+.butlerWebDev__liveEx--colors {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+.butlerWebDev__colorEx {
+    padding: 2em;
+    border: .2em solid white;
+    border-radius: .5em;
+    color: white;
+}
+
+#m7mainPurple {
+    background-color: $m7mainPurple;
+}
+
+#m7tablePurple {
+    background-color: $m7tablePurple;
+}
+
+#m7butlerBrown {
+    background-color: $m7butlerBrown;
+}
+
+#m7black {
+    background-color: $m7black;
+}
+
+#m7darkerGrey {
+    background-color: $m7darkerGrey;
+}
+
+#m7bodyGrey {
+    background-color: $m7bodyGrey;
+}
+
+#m7codeNtableGrey {
+    background-color: $m7codeNtableGrey;
+    color: black;
+}
+
+#m7blockquoteGrey {
+    background-color: $m7notesGrey;
+    color: black;
+}
+
+#m7white {
+    background-color: $m7white;
+    color: black;
+    border: .2em solid $m7notesGrey;
+}
+
+
+
+/* ---------- M7 Pattern Library Notes Section ---------- */
+
+.butlerWebDev__notes {
+    background-color: $m7notesGrey;
+    border: 1px solid $m7black;
+    padding: 0 1em;
+    margin: 0 1.5em;
+}
+
+
+
+/* ---------- M7 Pattern Library Code Block Section ---------- */
+
+.butlerWebDev__codeFigCap {
+   font-size: 0.8125em;
+    font-style: italic;
+    line-height: 1.3em;
+    padding-top: 0.5em; 
+}
+
+
+
+/* ---------- M7 Pattern Library Description List Section ---------- */
+
+.butlerWebDev__dt {
+    font-weight: bold;
+}
+
+.butlerWebDev__dd {
+    margin-bottom: 1em;
+}
+
+
+
+/* ---------- M7 Pattern Library Article Section ---------- */
+
+.butlerWebDev__artHeader {
+    border-bottom: .09em solid $m7codeNtableGrey;
+    font-size: .875em;
+    padding-bottom: .5em;
+}
+
+.butlerWebDev__artFooterDisclaimers {
+    border-top: .09em solid $m7codeNtableGrey;
+    font-size: .8em;
+}
+
+.butlerWebDev__fa {
+    display: inline-block;
+    padding-left: 1em;
+}
+
+.butlerWebDev__cclicense {
+    float: left;
+    
+}
+
+
+
+/* ---------- M7 Pattern Library Footer Section ---------- */
+
+.butlerWebDev__mainFooter {
+    margin-top: 1em;
+    border-top: 3px solid $m7mainPurple;
+    text-align: center;
+}
+
+
+
+/* ---------- M7 Pattern Library Captioned Images Section ---------- */
+
+    //see _modules.scss for rules about the actual <img> elements
+
+.butlerWebDev__figure {
+    margin: 1em;
+}
+
+.butlerWebDev__figcaption {
+    font-size: 0.8125em;
+    font-style: italic;
+    line-height: 1.3em;
+    padding-top: 0.5em;
+}
+
+
+
+/* ---------- M7 Pattern Library Header Section ---------- */
+
+    //see _fonts.scss for font style-rules that affect the link in this header
+.butlerWebDev__pageHeader {
+    border-bottom: 3px solid $m7mainPurple;
+}
+
+
+
+/* ---------- M7 Pattern Library Nav Bar Section ---------- */
+
+    //see _fonts.scss and _layout.scss for the other butlerWebDev__primaryNav rules
+
+.butlerWebDev__primaryNav {
+    position: relative;
+    
+    .butlerWebDev__primaryNavList {  
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: flex-start;
+        flex-wrap: wrap;
+		overflow: hidden;
+		background-color: $m7mainPurple;
+		}
+    
+}
+
+
