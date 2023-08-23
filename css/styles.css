@@ -1,0 +1,354 @@
+/* Base: general rules for the foundational components of the site */
+/* ---------- General sizing: border box with inheriting ---------- */
+.everyPage__htmlElement {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* ---------- main page/body colors & styles ---------- */
+.everyPage__htmlElement {
+  background-color: rgb(36, 52, 30);
+}
+
+.everyPage__body {
+  background-color: rgb(228, 226, 218);
+  -webkit-box-shadow: 0 1px 4px 1px #17171a;
+          box-shadow: 0 1px 4px 1px #17171a;
+}
+
+/* Fonts: font families, colors, size, line-height, etc for all the text on the site */
+.everyPage__htmlElement {
+  font-family: "Roboto", Verdana, Tahoma, sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+.everyPage__header h1 {
+  font-family: "Bebas Neue", Verdana, Tahoma, sans-serif;
+  color: #e4e2da;
+  text-align: center;
+  font-size: 2.25em;
+  line-height: 1;
+  padding: 1em 0;
+  margin: 0;
+}
+
+.newHome__headerText {
+  font-family: "Bebas Neue", Verdana, Tahoma, sans-serif;
+  color: #e4e2da;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 0.1;
+  padding: 2em 0;
+  margin: 0;
+}
+.newHome__headerText h1 {
+  padding: 0;
+}
+.newHome__headerText h2 {
+  font-size: 7rem;
+}
+
+.everyPage__footer {
+  font-size: 0.9em;
+  font-style: italic;
+  bottom: 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* ---------- main nav menu font styles ---------- */
+/* The link-text stays the same color even if they've been clicked, but background color changes for hover and active states. */
+.everyPage__primaryNavList li a {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+.everyPage__primaryNavList li a:link {
+  color: #e4e2da;
+}
+.everyPage__primaryNavList li a:visited {
+  color: #e4e2da;
+}
+.everyPage__primaryNavList li a:hover {
+  color: #e4e2da;
+  background-color: rgb(77, 77, 77);
+}
+.everyPage__primaryNavList li a:active {
+  color: #e4e2da;
+  background-color: rgb(39, 39, 39);
+}
+
+/* Components: used on most pages, but only once per page */
+/* ---------- Header Background/Image Rules ---------- */
+.everyPage__header {
+  width: 100%;
+  background-image: url("../images/bannerPic.png");
+  background-size: cover;
+  background-color: #333;
+}
+
+/* To visually hide skip links */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* To make skip links visible on focus */
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+/* ---------- main nav bar positioning & styles ---------- */
+.everyPage__primaryNav {
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 3em;
+}
+
+.everyPage__primaryNavList {
+  list-style-type: none;
+  position: absolute;
+  right: 0px;
+  height: 84vh;
+  top: 16vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  background-color: #333;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.everyPage__body {
+  overflow-x: hidden;
+}
+
+/* these rules could be used to make the individual nav links fade in and out when the smartphone-sized nav menu is toggled.
+    .everyPage__primaryNavList li {
+		opacity: 0; //the mobile nav links start seethrough, and the  navSlide function makes them visible
+	}
+
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        } to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+*/
+.everyPage__primaryNavburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #e4e2da;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.everyPage__primaryNavburger {
+  padding: 0.25em;
+  display: block;
+  cursor: pointer;
+}
+
+.everyPage__primaryNavList--active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.burgerX .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burgerX .line2 {
+  opacity: 0;
+}
+
+.burgerX .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ---------- Picture rules for the photo on my redesigned homepage ---------- */
+.newHome__portrait {
+  border-radius: 1em;
+  margin-right: 1em;
+  float: left;
+}
+
+/* Modules: items that can be used multiple times per page */
+/* ---------- Gallery Thumbnail Rules ---------- */
+.photoGal__thumbnails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.thumbnail {
+  height: 200px;
+  width: auto;
+  margin: 1em;
+}
+
+.photoGal__thumbnails a {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.photoGal__thumbnails a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* ---------- Section Rules ---------- */
+/* just to add a bit of space and a border under section-elements */
+.everyPage__section {
+  padding-bottom: 1em;
+  border-bottom: 0.1em solid #bebebe;
+}
+
+/* ---------- Blockquote rules ---------- */
+.everyPage__blockquote {
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+/* ---------- M6 article / TIL post rules ---------- */
+.m6article__summary, .m6article__fullArticle {
+  background-color: white;
+  padding: 1em;
+}
+.m6article__summary ul, .m6article__fullArticle ul {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* Layout: dedfault sizing is for smartphones, with media queries for larger screens */
+/* ---------- default/smartphone layout rules ---------- */
+.everyPage__body {
+  margin: 0%;
+}
+
+.everyPage__main {
+  padding: 0 8%;
+}
+
+/* ---------- tablet layout rules ---------- */
+@media screen and (min-width: 650px) {
+  .everyPage__body {
+    margin: 0% 5%;
+  }
+  .everyPage__header h1 {
+    font-size: 3.5em;
+  }
+  .everyPage__primaryNavList {
+    /* changes the nav bar from vertical (mobile) to horizontal */
+    height: auto;
+    top: auto;
+    margin: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .everyPage__primaryNavburger {
+    display: none;
+  }
+  .everyPage__primaryNav { /* Safari */
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  .m6article__summary picture, .m6article__fullArticle picture {
+    float: left;
+    padding: 1em;
+  }
+  .m6article__summary ul, .m6article__fullArticle ul {
+    clear: left;
+  }
+  .m6article__summary p, .m6article__fullArticle p {
+    padding: 1em 0 0 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .everyPage__body {
+    margin: 0% 10%;
+  }
+}
+/* ---------- desktop layout rules ---------- */
+@media screen and (min-width: 1500px) {
+  .everyPage__body {
+    margin: 0% auto;
+    max-width: 1200px;
+  }
+}
