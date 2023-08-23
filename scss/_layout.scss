@@ -1,0 +1,99 @@
+
+
+
+
+
+
+
+/* Layout: dedfault sizing is for smartphones, with media queries for larger screens */
+
+/* ---------- default/smartphone layout rules ---------- */
+
+.everyPage__body {
+    margin: 0%;
+}
+    
+.everyPage__main {
+    padding: 0 8%;
+    }
+
+
+
+/* ---------- tablet layout rules ---------- */
+
+@include responsive(650px) {
+    
+    .everyPage__body {
+        margin: 0% 5%;
+    }
+    
+    .everyPage__header {
+        h1 {
+        font-size: 3.5em;
+        }
+    }
+
+    .everyPage__primaryNavList {
+        /* changes the nav bar from vertical (mobile) to horizontal */
+        height: auto;
+        top: auto;
+        margin: 0;
+        flex-direction: row;
+        width: 100%;
+        transform: translateX(0%);
+}
+
+    .everyPage__primaryNavburger{
+	//the burger menu button only needs to be visible on mobile screens
+        display: none;
+    }
+    
+    .everyPage__primaryNav {
+    //these rules make the Nav bar stick to the top of the screen as users scroll down
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    } 
+    
+}
+
+
+
+@include responsive(800px) {
+    
+    .m6article__summary, .m6article__fullArticle {
+        
+        picture {
+            float: left;
+            padding: 1em;
+        }
+        
+        ul {
+            clear: left;
+        }
+        
+        p {
+            padding: 1em 0 0 0;
+        }
+        
+    }
+}
+
+
+@include responsive(1000px) {
+    .everyPage__body {
+    margin: 0% 10%;
+  }
+}
+
+
+
+/* ---------- desktop layout rules ---------- */
+
+@include responsive(1500px) {
+    .everyPage__body {
+        margin: 0% auto;
+        max-width: 1200px;
+    }
+
+}

@@ -1,0 +1,141 @@
+
+
+
+
+
+
+/* Components: used on most pages, but only once per page */
+
+/* ---------- Header Background/Image Rules ---------- */
+
+.everyPage__header {
+    width: 100%;
+    background-image: url("../images/bannerPic.png");
+    background-size: cover;
+    background-color: $navbarBackground;
+}
+
+
+
+/* To visually hide skip links */
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+
+/* To make skip links visible on focus */
+
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+
+
+/* ---------- main nav bar positioning & styles ---------- */
+
+
+.everyPage__primaryNav {
+    background-color: $navbarBackground;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 3em;
+}
+
+.everyPage__primaryNavList {
+	list-style-type: none;
+	position: absolute;
+	right: 0px;
+	height: 84vh;
+	top: 16vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	overflow: hidden;
+	background-color: $navbarBackground;
+	align-items: center;
+	width: 50%;
+	transform: translateX(100%); //this positions the nav menu offscreen unless it's moved with a Javascript function called "navSlide"
+    transition: transform 0.5s ease-in-out;
+}
+
+.everyPage__body {
+	overflow-x: hidden; //this prevents sideways scrolling on smartphone screens while the vertical nav menu is displayed offscreen by the rule above
+}
+
+ /* these rules could be used to make the individual nav links fade in and out when the smartphone-sized nav menu is toggled.
+    .everyPage__primaryNavList li {
+		opacity: 0; //the mobile nav links start seethrough, and the  navSlide function makes them visible
+	}
+
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        } to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+*/
+
+.everyPage__primaryNavburger div {
+    //these rules create the look of a "menu button" without having to use an icon or svg. each div displays as a little horizontal line.
+    width: 25px;
+    height: 3px;
+    background-color: $navbarTextColor;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.everyPage__primaryNavburger {
+    padding: .25em;
+    display: block;
+    cursor: pointer;
+}
+
+.everyPage__primaryNavList--active {
+    transform: translateX(0%); // this class can be added to the main menu-element by a Javascript function called "navSlide"
+}
+
+
+// these classes allow the "hamburger menu" to change into an "x" shape when it's toggled.
+.burgerX .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.burgerX .line2 {
+    opacity: 0;
+}
+.burgerX .line3 {
+    transform: rotate(45deg) translate(-5px, -6px); 
+}
+
+
+
+/* ---------- Picture rules for the photo on my redesigned homepage ---------- */
+
+.newHome__portrait {
+    border-radius: 1em;
+    margin-right: 1em;
+    float: left;
+}
+

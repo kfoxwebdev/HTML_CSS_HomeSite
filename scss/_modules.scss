@@ -1,0 +1,65 @@
+
+
+
+
+
+
+/* Modules: items that can be used multiple times per page */
+
+/* ---------- Gallery Thumbnail Rules ---------- */
+
+.photoGal__thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;          
+}
+
+.thumbnail {
+    height: 200px;
+    width: auto;
+    margin: 1em;
+}
+
+.photoGal__thumbnails { 
+	a {
+    	transition: .3s ease-in-out;
+		&:hover {
+    		transform: scale(1.2);
+		}
+	}
+}
+
+
+
+/* ---------- Section Rules ---------- */
+
+    /* just to add a bit of space and a border under section-elements */
+
+.everyPage__section {
+    padding-bottom: 1em;
+    border-bottom: .1em solid $sectionBorderColor;
+}
+
+
+/* ---------- Blockquote rules ---------- */
+
+.everyPage__blockquote {
+    background-color: white;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+
+
+/* ---------- M6 article / TIL post rules ---------- */
+
+.m6article__summary, .m6article__fullArticle {
+    background-color: white;
+    padding: 1em;
+    
+    ul {
+        list-style-type: none;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,31 @@
+@import "variables.scss";
+    // since this file, _base.scss, is the first thing imported into styles.scss, the variables imported above get integrated into the final CSS document for all the other .scss files to access
+
+
+
+
+/* Base: general rules for the foundational components of the site */
+
+/* ---------- General sizing: border box with inheriting ---------- */
+
+.everyPage__htmlElement {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+/* ---------- main page/body colors & styles ---------- */
+
+.everyPage__htmlElement {
+    background-color: $marginColor;
+}
+
+
+.everyPage__body {
+    background-color: $bodyBackgroundColor;
+    box-shadow: 0 1px 4px 1px $shadowColor;
+}

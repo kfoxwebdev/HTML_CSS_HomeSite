@@ -1,0 +1,97 @@
+@import "variables.scss";
+
+@import "mixins.scss";
+
+
+
+
+
+
+/* Fonts: font families, colors, size, line-height, etc for all the text on the site */
+
+.everyPage__htmlElement {
+    font-family: 'Roboto', Verdana, Tahoma, sans-serif;
+    color: $bodyTextColor;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+.everyPage__header{
+    h1{
+        font-family: 'Bebas Neue', Verdana, Tahoma, sans-serif;
+        color: $headerTextcolor;
+        text-align: center;
+        font-size: 2.25em;
+        line-height: 1;
+        padding: 1em 0;
+        margin: 0;
+    }
+}
+
+.newHome__headerText {
+    font-family: 'Bebas Neue', Verdana, Tahoma, sans-serif;
+    color: $headerTextcolor;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 0.1;
+    padding: 2em 0;
+    margin: 0;
+    h1 {
+        padding: 0;
+    }
+    h2 {
+        font-size: 7rem;
+    }
+}
+
+
+.everyPage__footer {
+    font-size: 0.9em;
+    font-style: italic;
+    bottom: 0;
+}
+
+
+.italic {
+    font-style: italic;
+}
+
+
+
+/* ---------- main nav menu font styles ---------- */
+
+    /* The link-text stays the same color even if they've been clicked, but background color changes for hover and active states. */
+
+.everyPage__primaryNavList{
+    li {
+        a {
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            padding: .5em 1em;
+            text-decoration: none;
+                &:link { 
+                    color: $navbarTextColor;	
+                }
+
+                &:visited { 
+                    color: $navbarTextColor; 
+                }
+
+                &:hover {
+                    color: $navbarTextColor;
+                    background-color: $navbarBackgroundHover;
+                }	
+
+                &:active {
+                    color: $navbarTextColor;
+                    background-color: $navbarBackgroundActive;
+                }
+        }
+    }
+}
