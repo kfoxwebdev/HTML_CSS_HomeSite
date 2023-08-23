@@ -1,0 +1,147 @@
+
+
+
+
+
+
+
+/* Layout --------------------------------------------------
+        dedfault sizing is for smartphones, with media queries for larger screens */
+
+
+/* ---------- default/smartphone layout rules ---------- */
+
+.finalPage__main {
+    margin: 1em 5%;
+    }
+
+.finalPage__header {
+	width: 100vw;
+    margin-bottom: 75px;
+}
+
+.finalPage__primaryNav {
+	width: 100vw;
+}
+
+.finalPage__headerText {
+    padding: 15px 0;
+    margin: 30px 50px;
+    border: 5px solid $myPurple;
+    border-top-right-radius: 50px;
+}
+
+.finalPage__siteName {
+    font-size: 7em;
+    padding-bottom: 20px;
+}
+
+.finalPage__tagline {
+    font-size: 1.5em;
+}
+
+    // default size for the triangle svg logo in the header
+    .finalPage__headerLogo {
+        width: 40%;
+        margin: 0 30%
+    }
+
+    .headerSVG {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+/* ---------- tablet layout rules ---------- */
+
+@include responsive(650px) {
+    
+    .finalPage__main {
+        margin: 1em 12%;
+    }
+    
+    .finalPage__primaryNavList {
+        /* changes the nav bar from vertical (mobile) to horizontal */
+        height: auto;
+        top: auto;
+        margin: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        transform: translateX(0%);
+        background: none;
+        li {
+            padding: 0 20px;
+        }
+    }
+
+    .finalPage__primaryNavburger{
+	//the burger menu button only needs to be visible on mobile screens
+        display: none;
+    }
+    
+    /*
+    .finalPage__primaryNav {
+    //these rules can make the Nav bar stick to the top of the screen as users scroll down
+        position: -webkit-sticky; // Safari
+        position: sticky;
+        top: 0;
+    } 
+    */
+    
+    .finalPage__headerBranding {
+    // makes the triangle svg and the site name/tagline appear side-by-side
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .finalPage__headerLogo {
+    //updated size for the triangle svg logo in the header
+        width: 20%;
+        margin: 0 0;
+        padding-left: 7%;
+    }
+    
+    .finalPage__headerText {
+    //vertically centers the header-text within the header
+        margin: auto 0;
+        margin-right: 17%;
+        padding: 15px 15px;
+    }
+    
+    .headerSVG {
+        max-width: 150px;
+    }
+    
+    .headerSVGhome {
+        max-width: 350px;
+        margin: 50px 0;
+    }
+    
+}
+
+
+
+/* ---------- desktop layout rules ---------- */
+
+@include responsive(1000px) {
+    .finalPage__siteName--home {
+        font-size: 12em;
+    }
+    
+    .finalPage__tagline--home {
+        font-size: 3em;
+    }
+    
+}
+
+
+
+@include responsive(1400px) {
+    .finalPage__main {
+        max-width: 1300px;
+    }
+
+}

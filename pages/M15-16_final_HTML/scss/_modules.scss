@@ -1,0 +1,206 @@
+
+
+
+
+
+
+/* Modules --------------------------------------------------
+        items that can be used/duplicated multiple times per page */
+
+
+
+/* ---------- General Picture/image Rules ---------- */
+.finalPage__pic-floatleft {
+    float: left;
+}
+
+
+
+/* ---------- General boxes / containers ---------- */
+
+.finalPage__contentBox {
+    background-color: $notQuiteWhite;
+    padding: 10px;
+    border: 5px solid $myPurple;
+    border-top-right-radius: 2em;  
+    margin: 2.5em 0;
+    box-shadow: 0px 3px 10px $shadowColor;
+}
+
+.finalPage__contentBox--whiteBG {
+    background-color: white;
+}
+
+.finalPage__contentBox--red {
+    background-color: $notQuiteWhite;
+    padding: 10px;
+    border: 5px solid $youRed;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2em;  
+}
+
+.finalPage__contentBox--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/* ---------- Video-cards (heavily modified from Bootstrap)  ---------- */
+
+.finalPage__cardStyles {
+    min-width: 19rem;
+    margin: 1em 0;
+    border: 2px solid $myPurple;
+    border-bottom-left-radius: 0.75em;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    font-size: 0.8em;
+}
+
+
+.finalPage__defaultButton { //mostly used within the video-cards
+    font-size: 0.9em;
+    color: $notQuiteWhite;
+    background-color: $myPurple;
+    border-style: solid;
+    border-color: $myPurple;
+    border-top-right-radius: 0.75em;
+    box-shadow: 0px 1px 5px $shadowColor;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+        &:hover {
+            color: white;
+            transform: scale(1.05);
+                }
+    a {
+        text-decoration: none;
+        color: $notQuiteWhite;
+        
+        &:link { 
+            color: $notQuiteWhite;	
+        }
+        
+        &:visited { 
+            color: $notQuiteWhite; 
+        }
+        
+        &:hover {
+            color: $notQuiteWhite;
+        }	
+        
+        &:active {
+            color: $notQuiteWhite;
+        }
+    }
+}
+
+
+/* ---------- Rules for grid-based <div> boxes (featured videos) ---------- */
+
+#gridVid {
+    // lets the embedded video resize responsively
+    position: relative;
+    padding-bottom: 56.25%; // 16:9 
+    padding-top: 25px;
+    height: 0;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.finalPage__gridBox {
+    // makes a grid-layout inside the finalPage__gridBox div (mobile default)
+    display: grid;
+	grid-template-rows: 
+        [gridTitle-start] 3em 
+        [gridVidName-start] auto 
+        [gridVid-start] auto 
+        [gridDesc-start] auto
+        [gridUpdate-start] 2em;
+	grid-template-columns: [column1] 100%;
+	grid-template-areas:
+		"areaOne"
+		"areaTwo"
+        "areaThree"
+		"areaFour"
+		"areaFive"
+    }
+    
+    #gridTitle {
+        grid-area: areaOne;
+        margin: auto;
+    }
+    
+    #gridVidName {
+        grid-area: areaTwo;
+    }
+    
+    #gridVid {
+        grid-area: areaThree;
+    }
+    
+    #gridDesc {
+        grid-area: areaFour;
+        padding-top: 1em;
+    }
+    
+    #gridUpdate {
+        grid-area: areaFive;
+        margin: auto;
+    }
+
+
+@media screen and (min-width: 1000px) {
+    // updates grid-layout of the homePage__gridBox div (larger screens)
+    
+    .finalPage__gridBox {
+		display: grid;
+		grid-template-rows: 
+            [gridTitle-start] 3em 
+            [content1-start] auto 
+            [content2-start] auto 
+            [footer-start] 2em;
+		grid-template-columns: [column1] 1fr [column2] 1fr;
+		grid-template-areas:
+			"areaOne areaOne"
+			"areaTwo areaTwo"
+			"areaThree areaFour"
+			"areaFive areaFive"
+	}
+
+    #gridTitle {
+        grid-area: areaOne;
+    }
+    
+    #gridVidName {
+        grid-area: areaTwo;
+    }
+    
+    #gridVid {
+        grid-area: areaThree;
+    }
+    
+    #gridDesc {
+        grid-area: areaFour;
+        padding-top: 0;
+        padding-left: 1em;
+    }
+    
+    #gridUpdate {
+        grid-area: areaFive;
+    }
+    
+}
+
+

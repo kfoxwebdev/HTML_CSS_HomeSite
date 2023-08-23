@@ -1,0 +1,162 @@
+
+
+
+
+
+
+/* Components --------------------------------------------------
+        used on most pages, but only once per page */
+
+/* ---------- Header Background/Image Rules ---------- */
+
+.finalPage__header {
+    background-image: url(../images/header_background.png);
+    background-size: cover;
+    background-color: $youRed;
+    box-shadow: 0px 2px 10px $shadowColor;
+    border-bottom-left-radius: 12vw;
+    padding-bottom: 40px;
+}
+
+footer {
+    margin-top: 5rem;
+}
+
+/* To visually hide skip links */
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+
+/* To make skip links visible on focus */
+
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 6rem;
+  left: 2rem;
+}
+
+
+
+/* ---------- main nav bar positioning & styles ---------- */
+
+.homeIcon {
+    height: 15px;
+    width: auto;
+}
+
+.finalPage__primaryNav {
+    //background-color: $youNotQuiteBlack;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 3em;
+}
+
+.finalPage__primaryNavList {
+	list-style-type: none;
+	position: absolute;
+	right: 0px;
+	height: 500px;
+	top: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	overflow: hidden;
+	background-color: $youNotQuiteBlack;
+	align-items: left;
+	width: 40%;
+	transform: translateX(100%); //this positions the nav menu offscreen unless it's moved with a Javascript function called "navSlide"
+    transition: transform 0.5s ease-in-out;
+}
+
+.finalPage__body {
+	overflow-x: hidden; //this prevents sideways scrolling on smartphone screens while the vertical nav menu is displayed offscreen by the rule above
+}
+
+
+.finalPage__primaryNavburger div {
+    //these rules create the look of a "menu button" without having to use an icon or svg. each div displays as a little horizontal line.
+    width: 25px;
+    height: 3px;
+    background-color: $notQuiteWhite;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.finalPage__primaryNavburger {
+    padding: .25em;
+    display: block;
+    cursor: pointer;
+}
+
+.finalPage__primaryNavList--active {
+    transform: translateX(0%); // this class can be added to the main menu-element by a Javascript function called "navSlide"
+}
+
+
+// these classes allow the "hamburger menu" to change into an "x" shape when it's toggled.
+.burgerX .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.burgerX .line2 {
+    opacity: 0;
+}
+.burgerX .line3 {
+    transform: rotate(45deg) translate(-5px, -6px); 
+}
+
+
+
+/* ---------- Scroll-to-Top Button Rules ---------- */
+
+.finalPage__scrollButton {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: block;
+    padding: 8px 4px;
+    background-color: #fff;
+    border-style: solid;
+    border-color: $youRed;
+    border-bottom-left-radius: 0.75em;
+    box-shadow: 1px 1px 10px $shadowColor;
+    cursor: pointer;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+        
+        &:hover {
+            background-color: white;
+            box-shadow: 1px 1px 12px;
+            transform: scale(1.05);
+                }
+}
+
+
+
+.finalPage__scrollButton--show {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+}

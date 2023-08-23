@@ -1,0 +1,90 @@
+@import "variables.scss";
+
+@import "mixins.scss";
+
+
+
+
+
+
+/* Fonts --------------------------------------------------
+        families, colors, size, line-height, etc for the site's text */
+
+        // NOTE: the .finalPage__headerText .finalPage__siteName and .finalPage__TagLine clsasses also listed in the Layout-rules since they have major changes based on the viewport size
+
+.finalPage__htmlElement {
+    font-family: 'Rubik', Verdana, Tahoma, sans-serif;
+    color: $youNotQuiteBlack;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.finalPage__main {
+    font-size: 1.5em;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+
+.finalPage__siteName {
+    font-family: 'Oswald', Verdana, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+}
+
+
+.finalPage__tagline {
+    font-family: 'Oswald', Verdana, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+
+.italic {
+    font-style: italic;
+}
+
+
+/* ---------- main nav menu font styles ---------- */
+
+    /* The link-text stays the same color even if they've been clicked, but background color changes for hover and active states. */
+
+.finalPage__primaryNavList{
+    li {
+        a {
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            padding: .5em 1em;
+            text-decoration: none;
+            border-bottom-left-radius: 20px;
+            transition: background 0.3s, -webkit-background 0.3s;
+                &:link { 
+                    color: $notQuiteWhite;	
+                }
+
+                &:visited { 
+                    color: $notQuiteWhite; 
+                }
+
+                &:hover {
+                    color: $notQuiteWhite;
+                    background-color: $navbarBackgroundHover;
+                }	
+
+                &:active {
+                    color: $notQuiteWhite;
+                    background-color: $navbarBackgroundActive;
+                }
+        }
+    }
+}
